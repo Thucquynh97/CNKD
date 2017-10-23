@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.picvongquay = new System.Windows.Forms.PictureBox();
+            this.components = new System.ComponentModel.Container();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btr = new System.Windows.Forms.Button();
             this.btq = new System.Windows.Forms.Button();
@@ -36,6 +37,8 @@
             this.bto = new System.Windows.Forms.Button();
             this.btn = new System.Windows.Forms.Button();
             this.btm = new System.Windows.Forms.Button();
+            this.btz = new System.Windows.Forms.Button();
+            this.btw = new System.Windows.Forms.Button();
             this.bty = new System.Windows.Forms.Button();
             this.btx = new System.Windows.Forms.Button();
             this.btv = new System.Windows.Forms.Button();
@@ -65,20 +68,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtMang = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btw = new System.Windows.Forms.Button();
-            this.btz = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.picvongquay)).BeginInit();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.gbdapan.SuspendLayout();
             this.SuspendLayout();
             // 
-            // picvongquay
+            // pictureBox1
             // 
-            this.picvongquay.Location = new System.Drawing.Point(8, 245);
-            this.picvongquay.Name = "picvongquay";
-            this.picvongquay.Size = new System.Drawing.Size(238, 197);
-            this.picvongquay.TabIndex = 0;
-            this.picvongquay.TabStop = false;
+            this.pictureBox1.Location = new System.Drawing.Point(372, 242);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(290, 290);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
             // groupBox2
             // 
@@ -110,7 +115,7 @@
             this.groupBox2.Controls.Add(this.bta);
             this.groupBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox2.Location = new System.Drawing.Point(252, 271);
+            this.groupBox2.Location = new System.Drawing.Point(13, 262);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(387, 171);
             this.groupBox2.TabIndex = 2;
@@ -176,6 +181,26 @@
             this.btm.Text = "M";
             this.btm.UseVisualStyleBackColor = true;
             this.btm.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btz
+            // 
+            this.btz.Location = new System.Drawing.Point(342, 106);
+            this.btz.Name = "btz";
+            this.btz.Size = new System.Drawing.Size(35, 22);
+            this.btz.TabIndex = 0;
+            this.btz.Text = "Z";
+            this.btz.UseVisualStyleBackColor = true;
+            this.btz.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btw
+            // 
+            this.btw.Location = new System.Drawing.Point(301, 106);
+            this.btw.Name = "btw";
+            this.btw.Size = new System.Drawing.Size(35, 22);
+            this.btw.TabIndex = 0;
+            this.btw.Text = "W";
+            this.btw.UseVisualStyleBackColor = true;
+            this.btw.Click += new System.EventHandler(this.button1_Click);
             // 
             // bty
             // 
@@ -359,7 +384,7 @@
             // 
             // btchoi
             // 
-            this.btchoi.Location = new System.Drawing.Point(325, 248);
+            this.btchoi.Location = new System.Drawing.Point(249, 213);
             this.btchoi.Name = "btchoi";
             this.btchoi.Size = new System.Drawing.Size(75, 23);
             this.btchoi.TabIndex = 3;
@@ -369,12 +394,13 @@
             // 
             // button24
             // 
-            this.button24.Location = new System.Drawing.Point(460, 248);
+            this.button24.Location = new System.Drawing.Point(357, 213);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(75, 23);
             this.button24.TabIndex = 3;
             this.button24.Text = "THOÁT";
             this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // gbdapan
             // 
@@ -458,33 +484,22 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Mạng";
             // 
-            // btw
+            // timer1
             // 
-            this.btw.Location = new System.Drawing.Point(301, 106);
-            this.btw.Name = "btw";
-            this.btw.Size = new System.Drawing.Size(35, 22);
-            this.btw.TabIndex = 0;
-            this.btw.Text = "W";
-            this.btw.UseVisualStyleBackColor = true;
-            this.btw.Click += new System.EventHandler(this.button1_Click);
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btz
+            // timer2
             // 
-            this.btz.Location = new System.Drawing.Point(342, 106);
-            this.btz.Name = "btz";
-            this.btz.Size = new System.Drawing.Size(35, 22);
-            this.btz.TabIndex = 0;
-            this.btz.Text = "Z";
-            this.btz.UseVisualStyleBackColor = true;
-            this.btz.Click += new System.EventHandler(this.button1_Click);
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 454);
+            this.ClientSize = new System.Drawing.Size(631, 477);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtMang);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtdiem);
             this.Controls.Add(this.label1);
@@ -493,11 +508,10 @@
             this.Controls.Add(this.button24);
             this.Controls.Add(this.btchoi);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.picvongquay);
             this.Name = "Form1";
             this.Text = "Chiếc nón kì diệu";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picvongquay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.gbdapan.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -507,7 +521,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox picvongquay;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btr;
         private System.Windows.Forms.Button btq;
@@ -546,6 +560,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btw;
         private System.Windows.Forms.Button btz;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 

@@ -13,6 +13,11 @@ namespace Chiecnonkidieu
 {
     public partial class Form1 : Form
     {
+        Random rand; //Chọn ngẫu nhiên kết quả
+        int ketqua; //kết quả sau khi ngừng quay nón
+        int angle; //góc quay
+        int count = 0; //đếm số lần lặp timer2
+        Image img;
         String[] arrQuestion = new String[100];
         String[] arrAnswer = new String[100];
         List<Label> labels = new List<Label>();
@@ -29,14 +34,14 @@ namespace Chiecnonkidieu
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            String part = Application.StartupPath + @"\chiecnon.png";
+            img = Image.FromFile(Application.StartupPath + @"\chiecnon.png");
             DialogResult dlg = MessageBox.Show("Chào mừng bạn đến với trò chơi Chiếc nón kí diệu \n -Nhấn nút Chơi để bắt đầu \n -Nhấn nút Thoát để thoát chương trình", "Chào mừng", MessageBoxButtons.OKCancel);
-            //if (dlg == DialogResult.OK)
-            //{
-            //    MessageBox.Show("Bạn được tặng 500 điểm");
-            //    diem = 500;
-            //    txtdiem.Text = diem.ToString();
-            //}
+            if (dlg == DialogResult.OK)
+            {
+                MessageBox.Show("Bạn được tặng 500 điểm");
+                diem = 500;
+                txtdiem.Text = diem.ToString();
+            }
             if (dlg != DialogResult.OK)
             {
                 MessageBox.Show("GoodBye!");
@@ -44,8 +49,6 @@ namespace Chiecnonkidieu
             }
             txtdiem.Text = diem.ToString() ;
             txtMang.Text = soMang.ToString();
-            picvongquay.Image = Image.FromFile(part);
-            picvongquay.SizeMode = PictureBoxSizeMode.StretchImage;
             groupBox2.Enabled = false;
 
         }
@@ -105,21 +108,26 @@ namespace Chiecnonkidieu
 
         //Chọn câu trả lời
         private void button1_Click(object sender, EventArgs e)
-        {  
-            Button b = (Button)sender;
-            //char charClicked = b.Text.ToCharArray()[0];
-            SelectQuestion(numQuest, b.Text.ToCharArray()[0]);
-           
-            b.Enabled = false;
-            if (answerLength == arrAnswer[numQuest].Length - space)
+        {
+
+            if (pictureBox1.Enabled == false)
             {
-                numQuest++;
-                space = 0;
-                answerLength = 0; //reset lại biến space và answerLength
-                Addlabels();
-                lbchoi.Text = "Câu " + (numQuest + 1) + " :" + arrQuestion[numQuest].ToString();
-                EnableButton();
+                Button b = (Button)sender;
+                //char charClicked = b.Text.ToCharArray()[0];
+                SelectQuestion(numQuest, b.Text.ToCharArray()[0]);
+
+                b.Enabled = false;
+                if (answerLength == arrAnswer[numQuest].Length - space)
+                {
+                    numQuest++;
+                    space = 0;
+                    answerLength = 0; //reset lại biến space và answerLength
+                    Addlabels();
+                    lbchoi.Text = "Câu " + (numQuest + 1) + " :" + arrQuestion[numQuest].ToString();
+                    EnableTrue();
+                }
             }
+            pictureBox1.Enabled = true;
         }
 
         private void btchoi_Click(object sender, EventArgs e)
@@ -168,7 +176,7 @@ namespace Chiecnonkidieu
                 txtMang.Text = soMang.ToString();
             }
         }
-        private void EnableButton()
+        private void EnableTrue()
         {
             bta.Enabled = true;
             btb.Enabled = true;
@@ -196,6 +204,272 @@ namespace Chiecnonkidieu
             btr.Enabled = true;
             btw.Enabled = true;
             btz.Enabled = true;
+        }
+        private void EnableFalse(char text)//khóa 1 nút button chỉ định
+        {
+            switch (text)
+            {
+                case 'A': bta.Enabled = false; break;
+                case 'B': btb.Enabled = false; break;
+                case 'C': btc.Enabled = false; break;
+                case 'D': btd.Enabled = false; break;
+                case 'E': bte.Enabled = false; break;
+                case 'F': btf.Enabled = false; break;
+                case 'G': btg.Enabled = false; break;
+                case 'H': bth.Enabled = false; break;
+                case 'I': bti.Enabled = false; break;
+                case 'J': btj.Enabled = false; break;
+                case 'K': btk.Enabled = false; break;
+                case 'L': btl.Enabled = false; break;
+                case 'M': btm.Enabled = false; break;
+                case 'N': btn.Enabled = false; break;
+                case 'O': bto.Enabled = false; break;
+                case 'P': btp.Enabled = false; break;
+                case 'Q': btp.Enabled = false; break;
+                case 'R': btr.Enabled = false; break;
+                case 'S': bts.Enabled = false; break;
+                case 'U': btu.Enabled = false; break;
+                case 'V': btv.Enabled = false; break;
+                case 'X': btx.Enabled = false; break;
+                case 'Y': bty.Enabled = false; break;
+                case 'W': btw.Enabled = false; break;
+                case 'Z': btz.Enabled = false; break;
+            }
+        }
+        public void tinhdiem(int x)
+        {
+            switch (x)
+            {
+                case 0:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô Nhân đôi điểm");
+                        diem = diem * 2;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+                case 15:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô 200 điểm");
+                        diem += 200;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+                case 30:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô 700 điểm");
+                        diem += 700;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+                case 45:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô 1000 điểm");
+                        diem += 1000;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+                case 60:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô 400 điểm");
+                        diem += 400;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+                case 75:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô Mất lượt");
+                        soMang--;
+                        txtMang.Text = soMang.ToString();
+                        break;
+                    }
+                case 90:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô 900 điểm");
+                        diem += 900;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+                case 105:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô May mắn\n" +
+                         "Bạn được chọn 1 ký tự");
+                        break;
+                    }
+                case 120:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô 300 điểm");
+                        diem += 300;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+                case 135:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô 800 điểm");
+                        diem += 800;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+                case 150:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô Mất điểm");
+                        diem = 0;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+                case 165:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô 1000 điểm");
+                        diem += 1000;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+                case 180:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô 400 điểm");
+                        diem += 400;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+                case 195:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô 600 điểm");
+                        diem += 600;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+                case 200:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô 300 điểm");
+                        diem += 300;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+                case 225:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô Thêm lượt");
+                        soMang++;
+                        txtMang.Text = soMang.ToString();
+                        break;
+                    }
+                case 240:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô 200 điểm");
+                        diem += 200;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+                case 255:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô 900 điểm");
+                        diem += 900;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+                case 270:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô 700 điểm");
+                        diem += 700;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+                case 285:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô Chia đôi điểm");
+                        diem = diem / 2;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+                case 300:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô 300 điểm");
+                        diem += 300;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+                case 315:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô 2000 điểm");
+                        diem += 2000;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+                case 330:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô 100 điểm");
+                        diem += 100;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+                case 345:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô 500 điểm");
+                        diem += 500;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+                case 360:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô Nhân đôi điểm");
+                        diem = diem * 2;
+                        txtdiem.Text = diem.ToString();
+                        break;
+                    }
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            rand = new Random();
+            ketqua = rand.Next(1, 25) * 15;
+            timer1.Interval = 30;
+            timer1.Start();
+            timer2.Start();
+            pictureBox1.Enabled = false;
+        }
+
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            g.TranslateTransform(pictureBox1.Width / 2, pictureBox1.Height / 2);
+            g.RotateTransform(angle);
+            g.TranslateTransform(-pictureBox1.Width / 2, -pictureBox1.Height / 2);
+            g.DrawImage(img, 0, 0);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (angle == 360)
+            {
+                angle = 0;
+            }
+            else
+                angle += 15;
+
+            this.Text = angle.ToString(); ;
+            pictureBox1.Invalidate(); // vẽ lại trên picturebox
+            Invalidate(); // vẽ lại trên form
+            if (ketqua == angle && timer2.Enabled == false)
+            {
+                timer1.Stop();
+                tinhdiem(ketqua);
+
+            }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            count++;
+            if (count == 20)
+            {
+                timer2.Enabled = false;
+                timer2.Stop();
+                count = 0;
+            }
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
