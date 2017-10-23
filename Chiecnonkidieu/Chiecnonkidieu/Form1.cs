@@ -469,7 +469,9 @@ namespace Chiecnonkidieu
 
         private void button24_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult dlg = MessageBox.Show("Bạn có muốn thoát không", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dlg == DialogResult.Yes)
+                this.Close();
         }
     }
 }
