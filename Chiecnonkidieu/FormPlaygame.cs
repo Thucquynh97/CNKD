@@ -13,23 +13,23 @@ using System.Collections;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Drawing.Drawing2D;
+
 namespace Chiecnonkidieu
 {
     public partial class FormPlaygame : Form
     {
-
         private bool flag; //Biến cờ kiểm soát thao tác người dùng VD:Quay nón xong phải chọn chữ và ngược lại
         private int ketqua; //Biến lưu trữ kết quả   
         private int count = 0; //Tạo hiệu ừng Quay ( timer2)
-        private Image img; //Biến lưu trữ hình ảnh Chiếc nón kì diệu
+        private Image img;
         private int angle; //góc của chiếc nón 15 điêm tương đương với 1 giá trị
         private float width;
         private float height;
-        private List<PictureBox> picture = new List<PictureBox>(); //List lưu trữ các PictureBox
+        private List<PictureBox> picture = new List<PictureBox>();
         private int numQuest { get; set; } //câu hỏi : 0 = câu 1
         private int answerLength = 0; //kiểm tra người dùng trả lời xong câu hỏi chưa
         private int diem = 0;
-        private int soMang = 3; //mạng của người chơi
+        private int soMang; //mạng của người chơi
         private int space = 0;  //biến đếm số khoảng trắng trong cau trả lời
         private int countselecttrue = 0; //đém ký tự khi người dùng chọn, vd : Lai van sam , chứ A có 3 chữ
         private ArrayList selected; // mảng chứa kí tự đúng của ng dùng
@@ -50,48 +50,56 @@ namespace Chiecnonkidieu
             cn.Connect();
             selected = new ArrayList();
             img = Image.FromFile(Application.StartupPath + @"\chiecnon.png");
-            DialogResult dlg = MessageBox.Show("Chào mừng bạn đến với trò chơi Chiếc nón kí diệu \n -Nhấn nút Chơi để bắt đầu \n -Nhấn nút Thoát để thoát chương trình", "Chào mừng", MessageBoxButtons.OKCancel);
-            if (dlg != DialogResult.OK)
-            {
-                MessageBox.Show("GoodBye!");
-                this.Close();
-            }
-            txtMang.Text = soMang.ToString();
+            txtMang.Text = "";
             groupBox2.Enabled = false;
         }
+
+        //////////////////////////////////////////
         //Thêm kí tự chữ trong đáp án vào groupbox
         private void Addlabels()
         {
             gbdapan.Controls.Clear();
             char[] wordChars = Import.arrAnswer1[numQuest].ToString().ToCharArray(); //chuyển đáp án thành từng kí tự
-            
+
             //đếm các khoảng trắng giữa các từ
-            foreach(char c in wordChars)
+            foreach (char c in wordChars)
             {
                 if (c == ' ')
                     space++;
             }
 
             int len = wordChars.Length;
-            int refer = gbdapan.Width / len/2; // chia khoảng cách từng kí tự trong gourpbox
+            int refer1 = gbdapan.Width / len / 2 + 7; // dùng để chia khoảng cách từng kí tự trong gourpbox
+            int refer2 = gbdapan.Width / len;
             for (int i = 0; i < len; i++)
             {
                 PictureBox pic = new PictureBox();
                 if (wordChars[i] != ' ')
                     pic.Image = Image.FromFile(Application.StartupPath + @"\Picture\daugach.png");
-                pic.Size = new Size(30, 50);
+                else
+                    pic.Text = "";
+                pic.Size = new Size(50, 50);
                 pic.SizeMode = PictureBoxSizeMode.Zoom;
-                pic.Location = new Point(10*15 + i * refer, gbdapan.Height - 70);
+                if (len <= 9)
+                    pic.Location = new Point(10 * 15 + i * refer1, gbdapan.Height - 60);
+                else if (len <= 12)
+                    pic.Location = new Point(10 * 10 + i * (refer1 + 10), gbdapan.Height - 60);
+                else if (len <= 15)
+                    pic.Location = new Point(5 + i * refer2, gbdapan.Height - 60);
+                else
+                    pic.Location = new Point(i * refer2 + 3, gbdapan.Height - 60);
                 pic.Parent = gbdapan;
-                pic.BringToFront(); //mang labels ra trước groupbox, bảo đảm các labels được nhìn thấy
+                pic.BringToFront(); //mang pic ra trước groupbox, bảo đảm được nhìn thấy
                 picture.Add(pic);
             }
         }
+
+        ///////////////////////////////////////////
         //Chọn câu trả lời
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            if (flag ==true)
+
+            if (flag == true)
             {
                 Button b = (Button)sender;
                 //char charClicked = b.Text.ToCharArray()[0];
@@ -106,15 +114,20 @@ namespace Chiecnonkidieu
                     answerLength = 0; //reset lại biến space và answerLength
                     Addlabels();
                     lbchoi.Text = "Câu " + (numQuest + 1) + " :" + Import.arrQuestion[numQuest].ToString();
+
                     EnableTrue();
                 }
                 flag = false;
             }
             else
             {
-                MessageBox.Show("Bạn chưa quay chiếc nón kỳ diệu","Cảnh Báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                lbthongbao.Text = "Bạn chưa quay chiếc nón kỳ diệu!";
+                // MessageBox.Show("Bạn chưa quay chiếc nón kỳ diệu","Cảnh Báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
+
+        ///////////////////////////////////////////
+        //Xử lý nút "Chơi"
         private void btchoi_Click(object sender, EventArgs e)
         {
             numQuest = 0;
@@ -128,10 +141,12 @@ namespace Chiecnonkidieu
             groupBox2.Enabled = true;
             EnableTrue();
             lbchoi.Text = "Câu " + (numQuest + 1) + " :" + Import.arrQuestion[numQuest].ToString();
-           Addlabels();
+            Addlabels();
             pictureBox1.Enabled = true;
-           btchoi.Enabled = false;
+            btchoi.Enabled = false;
         }
+
+        ///////////////////////////////////////////
         //Chọn câu hỏi
         private void SelectQuestion(int question, char charClicked)
         {
@@ -143,7 +158,7 @@ namespace Chiecnonkidieu
             {
                 lbstatus.Parent = gbdapan;
                 char[] wordchar = Import.arrAnswer1[question].ToString().ToCharArray(); // chuyển chuỗi kết quả thành mảng kí tự
-              
+
                 for (int i = 0; i < wordchar.Length; i++)
                 {
                     if (charClicked == wordchar[i])
@@ -152,7 +167,13 @@ namespace Chiecnonkidieu
                         answerLength++;
                         if (flagmess == true)
                         {
-                            lbthongbao.Text = "Bạn đã trả lời đúng";
+                            for (int j = 0; j < wordchar.Length; j++) //khi người dùng chọn 1 chữ cái thì hàm sẽ kiểm tra xem                              
+                            {                                         //chữ đó có bao nhiêu chữ trong kết quả
+                                if (charClicked == wordchar[j])
+                                    countselecttrue++;
+                            }
+                            lbthongbao.Text = "Bạn đã trả lời đúng, có " + countselecttrue + " chữ " + charClicked;
+
                             flagmess = false;
                         }
                         picture[i].Text = charClicked.ToString();
@@ -161,14 +182,7 @@ namespace Chiecnonkidieu
                         txtdiem.Text = diem.ToString();
                     }
                 }
-                flagmess = true;
-                for (int i = 0; i < wordchar.Length; i++) //khi người dùng chọn 1 chữ cái thì hàm sẽ kiểm tra xem                              
-                {                                         //chữ đó có bao nhiêu chữ trong kết quả
-
-                    if (charClicked == wordchar[i])
-                        countselecttrue++;
-                }
-                MessageBox.Show("Có " + countselecttrue + " chữ " + charClicked);
+                //MessageBox.Show("Có " + countselecttrue + " chữ " + charClicked);
                 countselecttrue = 0;
                 EnableFalse(charClicked);
             }
@@ -182,12 +196,12 @@ namespace Chiecnonkidieu
                     soMang--;
                     txtMang.Text = soMang.ToString();
                     MessageBox.Show("Ban da thua\nDiem cua ban: " + diem.ToString());
-                    
                 }
                 txtMang.Text = soMang.ToString();
-            }    
-
+            }
         }
+
+        ///////////////////////////////////////////
         //thêm dữ liệu vào database
         private void EnableTrue()
         {
@@ -218,6 +232,7 @@ namespace Chiecnonkidieu
             btw.Enabled = true;
             btz.Enabled = true;
         }
+
         private void EnableFalse(char text)//khóa 1 nút button chỉ định
         {
             switch (text)
@@ -249,6 +264,9 @@ namespace Chiecnonkidieu
                 case 'Z': btz.Enabled = false; break;
             }
         }
+
+        ////////////////////////////////////////////
+        /// Việc quay nón
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
@@ -257,9 +275,13 @@ namespace Chiecnonkidieu
             g.TranslateTransform(-pictureBox1.Width / 2, -pictureBox1.Height / 2);
             g.DrawImage(img, 0, 0);
         }
+
+        /////////////////////////////////
+        //Làm nón quay
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Random rand; //chọn ngẫu nhiên kết quả
+
             if (flag == false)
             {
                 rand = new Random();
@@ -271,19 +293,23 @@ namespace Chiecnonkidieu
             }
             else
             {
-                MessageBox.Show("Bạn chưa chọn chữ cái","Cảnh báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                lbthongbao.Text = "Bạn chưa chọn chữ cái trả lời!";
+                //MessageBox.Show("Bạn chưa chọn chữ cái","Cảnh báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 flag = true;
             }
-            
+
         }
-        //Hiển thị kết quả
+
+        //////////////////////////////////////////////////////////
+        //Hiển thị kết quả quay được và xử lý trường hợp đặc biệt
         public void Showpoint(int x)
         {
             switch (x)
             {
                 case 0:
                     {
-                        MessageBox.Show("Bạn đã quay vào ô Nhân đôi điểm","Chúc Mừng",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        lbthongbao.Text = "Bạn đã quay vào ô Nhân đôi điểm";
+                        //MessageBox.Show("Bạn đã quay vào ô Nhân đôi điểm","Chúc Mừng",MessageBoxButtons.OK,MessageBoxIcon.Information);
                         break;
                     }
                 case 15:
@@ -308,7 +334,8 @@ namespace Chiecnonkidieu
                     }
                 case 75:
                     {
-                        MessageBox.Show("Bạn đã quay vào ô Mất lượt","",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        lbthongbao.Text = "Bạn đã quay vào ô Mất lượt";
+                        //MessageBox.Show("Bạn đã quay vào ô Mất lượt","",MessageBoxButtons.OK,MessageBoxIcon.Information);
                         break;
                     }
                 case 90:
@@ -319,7 +346,7 @@ namespace Chiecnonkidieu
                 case 105:
                     {
                         MessageBox.Show("Bạn đã quay vào ô May mắn\n" +
-                         "Bạn được chọn 1 ký tự","Chúc Mừng",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        "Bạn được chọn 1 ký tự", "Chúc Mừng", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Formmayman frm = new Formmayman();
                         frm.ShowDialog();
                         if (select != -1)
@@ -334,7 +361,7 @@ namespace Chiecnonkidieu
                                 select2 = Convert.ToChar(selected[i]);
                                 if (select2 == wordchar[select])
                                 {
-                                    MessageBox.Show("Từ Đã lật","",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                                    MessageBox.Show("Từ Đã lật", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     return;
                                 }
                             }
@@ -343,7 +370,7 @@ namespace Chiecnonkidieu
                         }
                         else
                         {
-                            MessageBox.Show("Hêt thời gian","",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                            MessageBox.Show("Hêt thời gian", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     break;
@@ -377,14 +404,15 @@ namespace Chiecnonkidieu
                         lbthongbao.Text = "Bạn đã quay vào ô 600 điểm";
                         break;
                     }
-                case 200:
+                case 210:
                     {
                         lbthongbao.Text = "Bạn đã quay vào ô 300 điểm";
                         break;
                     }
                 case 225:
                     {
-                        MessageBox.Show("Bạn đã quay vào ô Thêm lượt","Chúc Mừng",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        lbthongbao.Text = "Bạn đã quay vào ô Thêm lượt";
+                        //MessageBox.Show("Bạn đã quay vào ô Thêm lượt","Chúc Mừng",MessageBoxButtons.OK,MessageBoxIcon.Information);
                         break;
                     }
                 case 240:
@@ -404,7 +432,8 @@ namespace Chiecnonkidieu
                     }
                 case 285:
                     {
-                        MessageBox.Show("Bạn đã quay vào ô Chia đôi điểm","",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                        lbthongbao.Text = "Bạn đã quay vào ô Chia đôi điểm";
+                        //MessageBox.Show("Bạn đã quay vào ô Chia đôi điểm","",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                         break;
                     }
                 case 300:
@@ -429,19 +458,22 @@ namespace Chiecnonkidieu
                     }
                 case 360:
                     {
-                        MessageBox.Show("Bạn đã quay vào ô nhân đôi điểm", "Chúc Mừng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        lbthongbao.Text = "Bạn đã quay vào ô nhân đôi điểm";
+                        //MessageBox.Show("Bạn đã quay vào ô nhân đôi điểm", "Chúc Mừng", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     }
             }
         }
-        //Thêm kết quả
+
+        //////////////////////////////////////
+        //Tính và hiện điểm cho người chơi 
         public void Addpoint(int x)
-        { 
-        switch (x)
+        {
+            switch (x)
             {
                 case 0:
                     {
-                        diem = diem* 2;
+                        diem = diem * 2;
                         txtdiem.Text = diem.ToString();
                         break;
                     }
@@ -483,7 +515,7 @@ namespace Chiecnonkidieu
                     }
                 case 105:
                     {
-                       
+
                         break;
                     }
                 case 120:
@@ -522,7 +554,7 @@ namespace Chiecnonkidieu
                         txtdiem.Text = diem.ToString();
                         break;
                     }
-                case 200:
+                case 210:
                     {
                         diem += 300;
                         txtdiem.Text = diem.ToString();
@@ -584,21 +616,24 @@ namespace Chiecnonkidieu
                     }
                 case 360:
                     {
-                        diem = diem* 2;
+                        diem = diem * 2;
                         txtdiem.Text = diem.ToString();
                         break;
                     }
             }
         }
-       
+
         //kết thúc trò chơi
         private void Endgame()
         {
             Formluudiem frm = new Formluudiem();
             frm.ShowDialog();
             this.Hide();
- 
+
         }
+
+        /////////////////////////////////////
+        //Sử dụng cho chiếc nón
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (angle == 360)
@@ -609,17 +644,19 @@ namespace Chiecnonkidieu
                 angle += 15;
 
             this.Text = angle.ToString(); ;
-             pictureBox1.Invalidate(); // vẽ lại trên picturebox
+            pictureBox1.Invalidate(); // vẽ lại trên picturebox
             if (ketqua == angle && timer2.Enabled == false)
             {
                 timer1.Stop();
                 Showpoint(ketqua);
-               
             }
         }
+
+        ////////////////////////////////////////////////////
+        //Sử dụng làm chiếc nón quay một thời gian rồi ngừng
         private void timer2_Tick(object sender, EventArgs e)
         {
-            
+
             count++;
             if (count == 20)
             {
@@ -628,6 +665,7 @@ namespace Chiecnonkidieu
                 count = 0;
             }
         }
+
         private void btthoat_Click(object sender, EventArgs e)
         {
             Endgame();
@@ -639,8 +677,7 @@ namespace Chiecnonkidieu
             this.Hide();
         }
 
-
-
+        //Vẽ nền cho form
         private void FormPlaygame_Paint(object sender, PaintEventArgs e)
         {
             Bitmap btm = new Bitmap(Application.StartupPath + @"\Picture\background1.jpg");

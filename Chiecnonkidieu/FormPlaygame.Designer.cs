@@ -409,7 +409,7 @@
             this.gbdapan.Controls.Add(this.lbstatus);
             this.gbdapan.Location = new System.Drawing.Point(12, 80);
             this.gbdapan.Name = "gbdapan";
-            this.gbdapan.Size = new System.Drawing.Size(572, 149);
+            this.gbdapan.Size = new System.Drawing.Size(650, 149);
             this.gbdapan.TabIndex = 4;
             this.gbdapan.TabStop = false;
             this.gbdapan.Text = "Đáp Án";
@@ -475,7 +475,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Enabled = false;
-            this.pictureBox1.Location = new System.Drawing.Point(419, 301);
+            this.pictureBox1.Location = new System.Drawing.Point(505, 301);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(290, 290);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -495,12 +495,11 @@
             // lbchoi
             // 
             this.lbchoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbchoi.Location = new System.Drawing.Point(38, 5);
+            this.lbchoi.Location = new System.Drawing.Point(13, 5);
             this.lbchoi.Name = "lbchoi";
-            this.lbchoi.Size = new System.Drawing.Size(551, 71);
+            this.lbchoi.Size = new System.Drawing.Size(649, 71);
             this.lbchoi.TabIndex = 11;
             this.lbchoi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
             // 
             // lbthongbao
             // 
@@ -516,7 +515,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 454);
+            this.ClientSize = new System.Drawing.Size(674, 454);
             this.Controls.Add(this.lbthongbao);
             this.Controls.Add(this.lbchoi);
             this.Controls.Add(this.pictureBox1);
