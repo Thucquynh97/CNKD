@@ -500,6 +500,7 @@
             this.lbchoi.Size = new System.Drawing.Size(551, 71);
             this.lbchoi.TabIndex = 11;
             this.lbchoi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+
             // 
             // lbthongbao
             // 

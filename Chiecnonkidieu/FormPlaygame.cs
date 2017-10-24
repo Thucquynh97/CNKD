@@ -21,11 +21,11 @@ namespace Chiecnonkidieu
         private bool flag; //Biến cờ kiểm soát thao tác người dùng VD:Quay nón xong phải chọn chữ và ngược lại
         private int ketqua; //Biến lưu trữ kết quả   
         private int count = 0; //Tạo hiệu ừng Quay ( timer2)
-        private Image img;
+        private Image img; //Biến lưu trữ hình ảnh Chiếc nón kì diệu
         private int angle; //góc của chiếc nón 15 điêm tương đương với 1 giá trị
         private float width;
         private float height;
-        private List<PictureBox> picture = new List<PictureBox>();
+        private List<PictureBox> picture = new List<PictureBox>(); //List lưu trữ các PictureBox
         private int numQuest { get; set; } //câu hỏi : 0 = câu 1
         private int answerLength = 0; //kiểm tra người dùng trả lời xong câu hỏi chưa
         private int diem = 0;
@@ -647,6 +647,5 @@ namespace Chiecnonkidieu
             Graphics g = e.Graphics;
             g.DrawImage((Image)btm, ClientRectangle);
         }
-
     }
 }
