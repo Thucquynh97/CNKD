@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{010D4351-F99D-4737-B095-619F0074B525}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Chiecnonkidieu</RootNamespace>
+    <AssemblyName>Chiecnonkidieu</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connectsql.cs" />
+    <Compile Include="Formdangnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formdangnhap.Designer.cs">
+      <DependentUpon>Formdangnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formhuongdan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formhuongdan.Designer.cs">
+      <DependentUpon>Formhuongdan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formmain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formmain.Designer.cs">
+      <DependentUpon>Formmain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formluudiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formluudiem.Designer.cs">
+      <DependentUpon>Formluudiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPlaygame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPlaygame.Designer.cs">
+      <DependentUpon>FormPlaygame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMayMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMayMan.Designer.cs">
+      <DependentUpon>FormMayMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formtuychinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formtuychinh.Designer.cs">
+      <DependentUpon>Formtuychinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormXemdiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXemdiem.Designer.cs">
+      <DependentUpon>FormXemdiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Import.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formdangnhap.resx">
+      <DependentUpon>Formdangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formhuongdan.resx">
+      <DependentUpon>Formhuongdan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formmain.resx">
+      <DependentUpon>Formmain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPlaygame.resx">
+      <DependentUpon>FormPlaygame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMayMan.resx">
+      <DependentUpon>FormMayMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formluudiem.resx">
+      <DependentUpon>Formluudiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formtuychinh.resx">
+      <DependentUpon>Formtuychinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXemdiem.resx">
+      <DependentUpon>FormXemdiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Graphics-Vibe-Developer-Photoshop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\colorful-triangles-wallpaper-800x480-47_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\diem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Thoat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\background1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\muiten.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,194 @@
+C:\Users\Unknow\source\repos\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe.config
+C:\Users\Unknow\source\repos\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe
+C:\Users\Unknow\source\repos\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.pdb
+C:\Users\Unknow\source\repos\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csprojResolveAssemblyReference.cache
+C:\Users\Unknow\source\repos\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Form1.resources
+C:\Users\Unknow\source\repos\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Properties.Resources.resources
+C:\Users\Unknow\source\repos\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.GenerateResource.Cache
+C:\Users\Unknow\source\repos\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.CoreCompileInputs.cache
+C:\Users\Unknow\source\repos\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.exe
+C:\Users\Unknow\source\repos\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.pdb
+D:\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe.config
+D:\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe
+D:\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.pdb
+D:\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csprojResolveAssemblyReference.cache
+D:\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Form1.resources
+D:\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Properties.Resources.resources
+D:\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.GenerateResource.Cache
+D:\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.exe
+D:\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.pdb
+C:\Users\Administrator\Desktop\KTPM\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe.config
+C:\Users\Administrator\Desktop\KTPM\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.exe
+C:\Users\Administrator\Desktop\KTPM\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.pdb
+C:\Users\Administrator\Desktop\KTPM\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\KTPM\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Form1.resources
+C:\Users\Administrator\Desktop\KTPM\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Properties.Resources.resources
+C:\Users\Administrator\Desktop\KTPM\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\KTPM\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe
+C:\Users\Administrator\Desktop\KTPM\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.pdb
+C:\Users\Administrator\Desktop\GameCNKD\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe.config
+C:\Users\Administrator\Desktop\GameCNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.exe
+C:\Users\Administrator\Desktop\GameCNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.pdb
+C:\Users\Administrator\Desktop\GameCNKD\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe
+C:\Users\Administrator\Desktop\GameCNKD\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.pdb
+C:\Users\Administrator\Desktop\GameCNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\GameCNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Form1.resources
+C:\Users\Administrator\Desktop\GameCNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Properties.Resources.resources
+C:\Users\Administrator\Desktop\GameCNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.GenerateResource.Cache
+C:\Users\Unknow\Desktop\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe.config
+C:\Users\Unknow\Desktop\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe
+C:\Users\Unknow\Desktop\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.pdb
+C:\Users\Unknow\Desktop\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csprojResolveAssemblyReference.cache
+C:\Users\Unknow\Desktop\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Form1.resources
+C:\Users\Unknow\Desktop\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Properties.Resources.resources
+C:\Users\Unknow\Desktop\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.GenerateResource.Cache
+C:\Users\Unknow\Desktop\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.CoreCompileInputs.cache
+C:\Users\Unknow\Desktop\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.exe
+C:\Users\Unknow\Desktop\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.pdb
+D:\Chiecnonkidieu\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe.config
+D:\Chiecnonkidieu\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe
+D:\Chiecnonkidieu\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.pdb
+D:\Chiecnonkidieu\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csprojResolveAssemblyReference.cache
+D:\Chiecnonkidieu\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Form1.resources
+D:\Chiecnonkidieu\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Properties.Resources.resources
+D:\Chiecnonkidieu\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.GenerateResource.Cache
+D:\Chiecnonkidieu\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.CoreCompileInputs.cache
+D:\Chiecnonkidieu\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.exe
+D:\Chiecnonkidieu\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.pdb
+D:\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe.config
+D:\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe
+D:\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.pdb
+D:\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csprojResolveAssemblyReference.cache
+D:\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Form1.resources
+D:\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Properties.Resources.resources
+D:\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.GenerateResource.Cache
+D:\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.CoreCompileInputs.cache
+D:\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.exe
+D:\Demo_CNKD\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.pdb
+D:\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe.config
+D:\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe
+D:\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.pdb
+D:\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csprojResolveAssemblyReference.cache
+D:\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Properties.Resources.resources
+D:\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.GenerateResource.Cache
+D:\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.CoreCompileInputs.cache
+D:\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.exe
+D:\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.pdb
+D:\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formmayman.resources
+D:\Demo_CNKD\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe.config
+D:\Demo_CNKD\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe
+D:\Demo_CNKD\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.pdb
+D:\Demo_CNKD\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csprojResolveAssemblyReference.cache
+D:\Demo_CNKD\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formmayman.resources
+D:\Demo_CNKD\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Properties.Resources.resources
+D:\Demo_CNKD\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.GenerateResource.Cache
+D:\Demo_CNKD\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.CoreCompileInputs.cache
+D:\Demo_CNKD\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.exe
+D:\Demo_CNKD\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.pdb
+D:\Demo_CNKD\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formmain.resources
+D:\Demo_CNKD\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormPlaygame.resources
+D:\Demo_CNKD\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormDangnhap.resources
+D:\Demo_CNKD\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormXemdiem.resources
+D:\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formmain.resources
+D:\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormPlaygame.resources
+D:\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormDangnhap.resources
+D:\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormXemdiem.resources
+D:\CNKD(orinal)\Chiecnonkidieu\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormTraloi.resources
+D:\Source Game\Chiecnonkidieu(15.10)\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe.config
+D:\Source Game\Chiecnonkidieu(15.10)\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe
+D:\Source Game\Chiecnonkidieu(15.10)\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.pdb
+D:\Source Game\Chiecnonkidieu(15.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csprojResolveAssemblyReference.cache
+D:\Source Game\Chiecnonkidieu(15.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formmain.resources
+D:\Source Game\Chiecnonkidieu(15.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormPlaygame.resources
+D:\Source Game\Chiecnonkidieu(15.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formmayman.resources
+D:\Source Game\Chiecnonkidieu(15.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormDangnhap.resources
+D:\Source Game\Chiecnonkidieu(15.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormXemdiem.resources
+D:\Source Game\Chiecnonkidieu(15.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Properties.Resources.resources
+D:\Source Game\Chiecnonkidieu(15.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.GenerateResource.Cache
+D:\Source Game\Chiecnonkidieu(15.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.CoreCompileInputs.cache
+D:\Source Game\Chiecnonkidieu(15.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.exe
+D:\Source Game\Chiecnonkidieu(15.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.pdb
+D:\Source Game\Chiecnonkidieu(18.10)\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe.config
+D:\Source Game\Chiecnonkidieu(18.10)\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe
+D:\Source Game\Chiecnonkidieu(18.10)\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.pdb
+D:\Source Game\Chiecnonkidieu(18.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csprojResolveAssemblyReference.cache
+D:\Source Game\Chiecnonkidieu(18.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formmain.resources
+D:\Source Game\Chiecnonkidieu(18.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormPlaygame.resources
+D:\Source Game\Chiecnonkidieu(18.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formmayman.resources
+D:\Source Game\Chiecnonkidieu(18.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormXemdiem.resources
+D:\Source Game\Chiecnonkidieu(18.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Properties.Resources.resources
+D:\Source Game\Chiecnonkidieu(18.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.GenerateResource.Cache
+D:\Source Game\Chiecnonkidieu(18.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.CoreCompileInputs.cache
+D:\Source Game\Chiecnonkidieu(18.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.exe
+D:\Source Game\Chiecnonkidieu(18.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.pdb
+D:\Source Game\Chiecnonkidieu(18.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formtuychinh.resources
+D:\Source Game\Chiecnonkidieu(18.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formluudiem.resources
+D:\Source Game\Chiecnonkidieu(18.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formdangnhap.resources
+D:\Source Game\Chiecnonkidieu(19.10)\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe.config
+D:\Source Game\Chiecnonkidieu(19.10)\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe
+D:\Source Game\Chiecnonkidieu(19.10)\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.pdb
+D:\Source Game\Chiecnonkidieu(19.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csprojResolveAssemblyReference.cache
+D:\Source Game\Chiecnonkidieu(19.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formdangnhap.resources
+D:\Source Game\Chiecnonkidieu(19.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formmain.resources
+D:\Source Game\Chiecnonkidieu(19.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormPlaygame.resources
+D:\Source Game\Chiecnonkidieu(19.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formmayman.resources
+D:\Source Game\Chiecnonkidieu(19.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formluudiem.resources
+D:\Source Game\Chiecnonkidieu(19.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formtuychinh.resources
+D:\Source Game\Chiecnonkidieu(19.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormXemdiem.resources
+D:\Source Game\Chiecnonkidieu(19.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Properties.Resources.resources
+D:\Source Game\Chiecnonkidieu(19.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.GenerateResource.Cache
+D:\Source Game\Chiecnonkidieu(19.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.CoreCompileInputs.cache
+D:\Source Game\Chiecnonkidieu(19.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.exe
+D:\Source Game\Chiecnonkidieu(19.10)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.pdb
+D:\Source Game\Chiecnonkidieu(2010)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csprojResolveAssemblyReference.cache
+D:\Source Game\Chiecnonkidieu(2010)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formdangnhap.resources
+D:\Source Game\Chiecnonkidieu(2010)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formmain.resources
+D:\Source Game\Chiecnonkidieu(2010)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormPlaygame.resources
+D:\Source Game\Chiecnonkidieu(2010)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formmayman.resources
+D:\Source Game\Chiecnonkidieu(2010)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formluudiem.resources
+D:\Source Game\Chiecnonkidieu(2010)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formtuychinh.resources
+D:\Source Game\Chiecnonkidieu(2010)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormXemdiem.resources
+D:\Source Game\Chiecnonkidieu(2010)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Properties.Resources.resources
+D:\Source Game\Chiecnonkidieu(2010)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.GenerateResource.Cache
+D:\Source Game\Chiecnonkidieu(2010)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.CoreCompileInputs.cache
+D:\Source Game\Chiecnonkidieu(2010)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.exe
+D:\Source Game\Chiecnonkidieu(2010)\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.pdb
+D:\Source Game\Chiecnonkidieu(2010)\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe.config
+D:\Source Game\Chiecnonkidieu(2010)\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe
+D:\Source Game\Chiecnonkidieu(2010)\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.pdb
+D:\Source Game\Chiecnonkidieu(20.10)-Update\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe.config
+D:\Source Game\Chiecnonkidieu(20.10)-Update\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe
+D:\Source Game\Chiecnonkidieu(20.10)-Update\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.pdb
+D:\Source Game\Chiecnonkidieu(20.10)-Update\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csprojResolveAssemblyReference.cache
+D:\Source Game\Chiecnonkidieu(20.10)-Update\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formdangnhap.resources
+D:\Source Game\Chiecnonkidieu(20.10)-Update\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formmain.resources
+D:\Source Game\Chiecnonkidieu(20.10)-Update\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormPlaygame.resources
+D:\Source Game\Chiecnonkidieu(20.10)-Update\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formmayman.resources
+D:\Source Game\Chiecnonkidieu(20.10)-Update\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formluudiem.resources
+D:\Source Game\Chiecnonkidieu(20.10)-Update\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formtuychinh.resources
+D:\Source Game\Chiecnonkidieu(20.10)-Update\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormXemdiem.resources
+D:\Source Game\Chiecnonkidieu(20.10)-Update\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Properties.Resources.resources
+D:\Source Game\Chiecnonkidieu(20.10)-Update\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.GenerateResource.Cache
+D:\Source Game\Chiecnonkidieu(20.10)-Update\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.CoreCompileInputs.cache
+D:\Source Game\Chiecnonkidieu(20.10)-Update\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.exe
+D:\Source Game\Chiecnonkidieu(20.10)-Update\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.pdb
+D:\Source Game\Chiecnonkidieu(20.10)-Update-2\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe.config
+D:\Source Game\Chiecnonkidieu(20.10)-Update-2\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe
+D:\Source Game\Chiecnonkidieu(20.10)-Update-2\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.pdb
+D:\Source Game\Chiecnonkidieu(20.10)-Update-2\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csprojResolveAssemblyReference.cache
+D:\Source Game\Chiecnonkidieu(20.10)-Update-2\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formdangnhap.resources
+D:\Source Game\Chiecnonkidieu(20.10)-Update-2\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formhuongdan.resources
+D:\Source Game\Chiecnonkidieu(20.10)-Update-2\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formmain.resources
+D:\Source Game\Chiecnonkidieu(20.10)-Update-2\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormPlaygame.resources
+D:\Source Game\Chiecnonkidieu(20.10)-Update-2\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formmayman.resources
+D:\Source Game\Chiecnonkidieu(20.10)-Update-2\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formluudiem.resources
+D:\Source Game\Chiecnonkidieu(20.10)-Update-2\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formtuychinh.resources
+D:\Source Game\Chiecnonkidieu(20.10)-Update-2\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormXemdiem.resources
+D:\Source Game\Chiecnonkidieu(20.10)-Update-2\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Properties.Resources.resources
+D:\Source Game\Chiecnonkidieu(20.10)-Update-2\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.GenerateResource.Cache
+D:\Source Game\Chiecnonkidieu(20.10)-Update-2\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.CoreCompileInputs.cache
+D:\Source Game\Chiecnonkidieu(20.10)-Update-2\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.exe
+D:\Source Game\Chiecnonkidieu(20.10)-Update-2\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.pdb
+E:\Source Game\Chiecnonkidieu(20.10)-Update-2\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe.config
+E:\Source Game\Chiecnonkidieu(20.10)-Update-2\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.exe
+E:\Source Game\Chiecnonkidieu(20.10)-Update-2\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.pdb
