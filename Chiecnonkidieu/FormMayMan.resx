@@ -132,6 +132,9 @@
   <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="btsubmit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -142,7 +145,7 @@
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAuYAAAIkCAYAAABSue7sAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUATWljcm9zb2Z0IE9mZmljZX/tNXEAAP+NSURBVHhe7J0F
+        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUATWljcm9zb2Z0IE9mZmljZX/tNXEAAP+NSURBVHhe7J0F
         fFVH+v6Ju0Jwp0gLhZYKdXd3l922W9+6b23r3TruFoi7CwkESAhxd3d3T+D5P+/cXBrSS0vY7a/d/V/6
         eXpuzp0zZ86cOTPf973vmRm329gCJyPXU5GR5YllbAk3k5OTu4kVPH5HeZpan5S8TMYub1ObX9XoND5m
         tvAxt/6FfM2slLz52cPSFm6WdvAwt4e3mQN8TYdlZg8/Hu/PsgaYWiKE1xYm4t9B3O9nastzyDET4GU5

@@ -27,8 +27,10 @@ namespace Chiecnonkidieu
             for (int j = 0; j < dt.Rows.Count; j++)
             {
                 int r = rand.Next(0, dt.Rows.Count-1);
-                arrQuestion.Add(dt.Rows[r][0]);
-                arrAnswer1.Add(dt.Rows[r][1]);
+              //  arrQuestion.Add(dt.Rows[r][0]);
+              //  arrAnswer1.Add(dt.Rows[r][1]);
+                arrQuestion.Add(dt.Rows[r][1]);
+                arrAnswer1.Add(dt.Rows[r][2]);
 
             }
 ;        }

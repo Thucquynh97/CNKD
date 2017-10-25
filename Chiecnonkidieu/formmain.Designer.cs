@@ -33,21 +33,23 @@
             this.xemdiem = new System.Windows.Forms.PictureBox();
             this.thoat = new System.Windows.Forms.PictureBox();
             this.tuychinh = new System.Windows.Forms.PictureBox();
-            this.bthuongdan = new System.Windows.Forms.Button();
+            this.huongdan = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.playgane)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xemdiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.thoat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tuychinh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.huongdan)).BeginInit();
             this.SuspendLayout();
             // 
             // playgane
             // 
             this.playgane.BackColor = System.Drawing.Color.Transparent;
-            this.playgane.BackgroundImage = global::Chiecnonkidieu.Properties.Resources.colorful_triangles_wallpaper_800x480_47_12;
+            this.playgane.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("playgane.BackgroundImage")));
+            this.playgane.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.playgane.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.playgane.Location = new System.Drawing.Point(348, 81);
+            this.playgane.Location = new System.Drawing.Point(319, 53);
             this.playgane.Name = "playgane";
-            this.playgane.Size = new System.Drawing.Size(186, 75);
+            this.playgane.Size = new System.Drawing.Size(148, 116);
             this.playgane.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.playgane.TabIndex = 1;
             this.playgane.TabStop = false;
@@ -56,11 +58,12 @@
             // xemdiem
             // 
             this.xemdiem.BackColor = System.Drawing.Color.Transparent;
-            this.xemdiem.BackgroundImage = global::Chiecnonkidieu.Properties.Resources.diem;
+            this.xemdiem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("xemdiem.BackgroundImage")));
+            this.xemdiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.xemdiem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.xemdiem.Location = new System.Drawing.Point(344, 174);
+            this.xemdiem.Location = new System.Drawing.Point(467, 114);
             this.xemdiem.Name = "xemdiem";
-            this.xemdiem.Size = new System.Drawing.Size(210, 63);
+            this.xemdiem.Size = new System.Drawing.Size(136, 101);
             this.xemdiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.xemdiem.TabIndex = 1;
             this.xemdiem.TabStop = false;
@@ -69,11 +72,12 @@
             // thoat
             // 
             this.thoat.BackColor = System.Drawing.Color.Transparent;
-            this.thoat.BackgroundImage = global::Chiecnonkidieu.Properties.Resources.Thoat;
+            this.thoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("thoat.BackgroundImage")));
+            this.thoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.thoat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.thoat.Location = new System.Drawing.Point(366, 332);
+            this.thoat.Location = new System.Drawing.Point(332, 358);
             this.thoat.Name = "thoat";
-            this.thoat.Size = new System.Drawing.Size(168, 71);
+            this.thoat.Size = new System.Drawing.Size(173, 102);
             this.thoat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.thoat.TabIndex = 1;
             this.thoat.TabStop = false;
@@ -82,25 +86,27 @@
             // tuychinh
             // 
             this.tuychinh.BackColor = System.Drawing.Color.Transparent;
+            this.tuychinh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tuychinh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tuychinh.Image = ((System.Drawing.Image)(resources.GetObject("tuychinh.Image")));
-            this.tuychinh.Location = new System.Drawing.Point(366, 259);
+            this.tuychinh.Location = new System.Drawing.Point(467, 234);
             this.tuychinh.Name = "tuychinh";
-            this.tuychinh.Size = new System.Drawing.Size(165, 55);
-            this.tuychinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.tuychinh.Size = new System.Drawing.Size(136, 122);
+            this.tuychinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tuychinh.TabIndex = 2;
             this.tuychinh.TabStop = false;
             this.tuychinh.Click += new System.EventHandler(this.tuychinh_Click);
             // 
-            // bthuongdan
+            // huongdan
             // 
-            this.bthuongdan.Location = new System.Drawing.Point(528, 432);
-            this.bthuongdan.Name = "bthuongdan";
-            this.bthuongdan.Size = new System.Drawing.Size(75, 23);
-            this.bthuongdan.TabIndex = 3;
-            this.bthuongdan.Text = "Hướng Dẫn";
-            this.bthuongdan.UseVisualStyleBackColor = true;
-            this.bthuongdan.Click += new System.EventHandler(this.bthuongdan_Click);
+            this.huongdan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("huongdan.BackgroundImage")));
+            this.huongdan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.huongdan.Location = new System.Drawing.Point(326, 175);
+            this.huongdan.Name = "huongdan";
+            this.huongdan.Size = new System.Drawing.Size(141, 129);
+            this.huongdan.TabIndex = 3;
+            this.huongdan.TabStop = false;
+            this.huongdan.Click += new System.EventHandler(this.huongdan_Click);
             // 
             // Formmain
             // 
@@ -108,8 +114,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackgroundImage = global::Chiecnonkidieu.Properties.Resources.background;
-            this.ClientSize = new System.Drawing.Size(665, 480);
-            this.Controls.Add(this.bthuongdan);
+            this.ClientSize = new System.Drawing.Size(691, 497);
+            this.Controls.Add(this.huongdan);
             this.Controls.Add(this.tuychinh);
             this.Controls.Add(this.thoat);
             this.Controls.Add(this.xemdiem);
@@ -121,6 +127,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.xemdiem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.thoat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tuychinh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.huongdan)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -130,6 +137,6 @@
         private System.Windows.Forms.PictureBox xemdiem;
         private System.Windows.Forms.PictureBox thoat;
         private System.Windows.Forms.PictureBox tuychinh;
-        private System.Windows.Forms.Button bthuongdan;
+        private System.Windows.Forms.PictureBox huongdan;
     }
 }
