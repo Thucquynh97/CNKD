@@ -12,9 +12,15 @@ namespace Chiecnonkidieu
 {
     public partial class Formmayman : Form
     {
-        int count = 0;
+        private int count = 0;
+        private int countNumOfQuestion; //đếm kí tự của câu trả lời
         public Formmayman()
         {
+            InitializeComponent();
+        }
+        public Formmayman(int a)
+        {
+            this.countNumOfQuestion = a;
             InitializeComponent();
         }
 
@@ -46,28 +52,32 @@ namespace Chiecnonkidieu
                 e.Handled = true;
 
             }
-            else
-            {
-                if (txtmayman.Text.Count() != 0)
-                {
-                    txtmayman.Text = "";
-                }
-                
-            }
         }
 
         private void btsubmit_Click(object sender, EventArgs e)
         {
-            if(txtmayman.Text != "")
+            if(txtmayman.Text == "")
             {
+                MessageBox.Show("Bạn chưa nhập ô may mắn", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        
+            else if (txtmayman.Text != "" && int.Parse(txtmayman.Text) <= count)
+            {
+  
                 FormPlaygame.select = int.Parse(txtmayman.Text) - 1;
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Bạn chưa nhập ô may mắn", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning); 
+                MessageBox.Show("Bạn nhập gia trị sai\nNhập giá trị < " + count, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
+
+        }
+
+        private void Formmayman_Load(object sender, EventArgs e)
+        {
+            count = Import.arrAnswer1[countNumOfQuestion].ToString().Length;
         }
     }
 }

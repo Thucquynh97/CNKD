@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connectsql.cs" />
+    <Compile Include="FormChienthang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChienthang.Designer.cs">
+      <DependentUpon>FormChienthang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formdangnhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,9 +102,18 @@
     <Compile Include="FormXemdiem.Designer.cs">
       <DependentUpon>FormXemdiem.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormYnghiacautraloi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormYnghiacautraloi.Designer.cs">
+      <DependentUpon>FormYnghiacautraloi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Import.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormChienthang.resx">
+      <DependentUpon>FormChienthang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formdangnhap.resx">
       <DependentUpon>Formdangnhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormXemdiem.resx">
       <DependentUpon>FormXemdiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormYnghiacautraloi.resx">
+      <DependentUpon>FormYnghiacautraloi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

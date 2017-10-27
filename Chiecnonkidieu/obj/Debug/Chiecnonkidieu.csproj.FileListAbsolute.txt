@@ -208,3 +208,5 @@ E:\KTPM\BTL_CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Properties.Resources.re
 E:\KTPM\BTL_CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.GenerateResource.Cache
 E:\KTPM\BTL_CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.exe
 E:\KTPM\BTL_CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.pdb
+E:\KTPM\BTL_CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormChienthang.resources
+E:\KTPM\BTL_CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormYnghiacautraloi.resources
