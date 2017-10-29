@@ -109,6 +109,7 @@
             this.Controls.Add(this.txtmayman);
             this.Name = "Formmayman";
             this.Text = "May Mắn";
+            this.Load += new System.EventHandler(this.Formmayman_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

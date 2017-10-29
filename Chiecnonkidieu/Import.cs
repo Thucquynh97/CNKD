@@ -14,6 +14,7 @@ namespace Chiecnonkidieu
     {
         public static ArrayList arrQuestion { get; set; }
         public static  ArrayList arrAnswer1 { get; set; }
+        public static ArrayList arrAnswer2 { get; set; }
         private Random rand;
         public void ImportQA(SqlConnection cn,string str)
         {
@@ -21,17 +22,24 @@ namespace Chiecnonkidieu
 
             arrQuestion = new ArrayList();
             arrAnswer1 = new ArrayList();
+            arrAnswer2 = new ArrayList();
             SqlDataAdapter da = new SqlDataAdapter(str, cn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             for (int j = 0; j < dt.Rows.Count; j++)
             {
                 int r = rand.Next(0, dt.Rows.Count-1);
+<<<<<<< HEAD
               //  arrQuestion.Add(dt.Rows[r][0]);
               //  arrAnswer1.Add(dt.Rows[r][1]);
                 arrQuestion.Add(dt.Rows[r][1]);
                 arrAnswer1.Add(dt.Rows[r][2]);
 
+=======
+                arrQuestion.Add(dt.Rows[r][0]);
+                arrAnswer1.Add(dt.Rows[r][1]);
+                arrAnswer2.Add(dt.Rows[r][2]);
+>>>>>>> 3b89d02fafda90465a00c6b368e00c0c9853563e
             }
 ;        }
         public void ImportPoint(SqlConnection cn, string name, int point)

@@ -108,14 +108,7 @@ namespace Chiecnonkidieu
                 b.Enabled = false;
                 if (answerLength == Import.arrAnswer1[numQuest].ToString().Length - space)
                 {
-                    picture.Clear();
-                    numQuest++;
-                    space = 0;
-                    answerLength = 0; //reset lại biến space và answerLength
-                    Addlabels();
-                    lbchoi.Text = "Câu " + (numQuest + 1) + " :" + Import.arrQuestion[numQuest].ToString();
-
-                    EnableTrue();
+                    NextQuestion();
                 }
                 flag = false;
             }
@@ -125,7 +118,23 @@ namespace Chiecnonkidieu
                 // MessageBox.Show("Bạn chưa quay chiếc nón kỳ diệu","Cảnh Báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
+        private void NextQuestion() //chuyển sang câu hỏi mới
+        {
 
+            FormChienthang frm1 = new FormChienthang();
+            frm1.ShowDialog();
+            FormYnghiacautraloi frm2 = new FormYnghiacautraloi(numQuest);
+            frm2.ShowDialog();
+            picture.Clear();
+            numQuest++;
+            space = 0;
+            answerLength = 0; //reset lại biến space và answerLength
+            Addlabels();
+            lbchoi.Text = "Câu " + (numQuest + 1) + " :" + Import.arrQuestion[numQuest].ToString();
+            lbthongbao.Text = "";
+            EnableTrue();
+            selected.Clear();
+        }
         ///////////////////////////////////////////
         //Xử lý nút "Chơi"
         private void btchoi_Click(object sender, EventArgs e)
@@ -308,8 +317,8 @@ namespace Chiecnonkidieu
             {
                 case 0:
                     {
-                        lbthongbao.Text = "Bạn đã quay vào ô Nhân đôi điểm";
-                        //MessageBox.Show("Bạn đã quay vào ô Nhân đôi điểm","Chúc Mừng",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+                        MessageBox.Show("Bạn đã quay vào ô Nhân đôi điểm","Chúc Mừng",MessageBoxButtons.OK,MessageBoxIcon.Information);
                         break;
                     }
                 case 15:
@@ -334,8 +343,9 @@ namespace Chiecnonkidieu
                     }
                 case 75:
                     {
-                        lbthongbao.Text = "Bạn đã quay vào ô Mất lượt";
-                        //MessageBox.Show("Bạn đã quay vào ô Mất lượt","",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        MessageBox.Show("Bạn đã quay vào ô Mất Mạng","",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        soMang--;
+                        txtMang.Text = soMang.ToString();
                         break;
                     }
                 case 90:
@@ -347,7 +357,7 @@ namespace Chiecnonkidieu
                     {
                         MessageBox.Show("Bạn đã quay vào ô May mắn\n" +
                         "Bạn được chọn 1 ký tự", "Chúc Mừng", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Formmayman frm = new Formmayman();
+                        Formmayman frm = new Formmayman(numQuest);
                         frm.ShowDialog();
                         if (select != -1)
                         {
@@ -366,6 +376,13 @@ namespace Chiecnonkidieu
                                 }
                             }
                             SelectQuestion(numQuest, wordchar[select]);
+                            if (answerLength == Import.arrAnswer1[numQuest].ToString().Length - space)
+                            {
+                                NextQuestion();
+                                flag = false;
+                            }
+                           
+
 
                         }
                         else
@@ -386,7 +403,9 @@ namespace Chiecnonkidieu
                     }
                 case 150:
                     {
-                        lbthongbao.Text = "Bạn đã quay vào ô Mất điểm";
+                        MessageBox.Show("Bạn đã quay vào ô Mất Điểm", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        diem = 0;
+                        txtdiem.Text = diem.ToString();
                         break;
                     }
                 case 165:
@@ -411,8 +430,9 @@ namespace Chiecnonkidieu
                     }
                 case 225:
                     {
-                        lbthongbao.Text = "Bạn đã quay vào ô Thêm lượt";
-                        //MessageBox.Show("Bạn đã quay vào ô Thêm lượt","Chúc Mừng",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        MessageBox.Show("Bạn đã quay vào ô Thêm Mạng","Chúc Mừng",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        soMang++;
+                        txtMang.Text = soMang.ToString();
                         break;
                     }
                 case 240:
@@ -432,8 +452,8 @@ namespace Chiecnonkidieu
                     }
                 case 285:
                     {
-                        lbthongbao.Text = "Bạn đã quay vào ô Chia đôi điểm";
-                        //MessageBox.Show("Bạn đã quay vào ô Chia đôi điểm","",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                        MessageBox.Show("Bạn đã quay vào ô Chia đôi điểm","",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                        txtdiem.Text =(diem/2).ToString();
                         break;
                     }
                 case 300:
@@ -458,8 +478,7 @@ namespace Chiecnonkidieu
                     }
                 case 360:
                     {
-                        lbthongbao.Text = "Bạn đã quay vào ô nhân đôi điểm";
-                        //MessageBox.Show("Bạn đã quay vào ô nhân đôi điểm", "Chúc Mừng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Bạn đã quay vào ô nhân đôi điểm", "Chúc Mừng", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     }
             }
@@ -503,8 +522,6 @@ namespace Chiecnonkidieu
                     }
                 case 75:
                     {
-                        soMang--;
-                        txtMang.Text = soMang.ToString();
                         break;
                     }
                 case 90:
@@ -532,8 +549,7 @@ namespace Chiecnonkidieu
                     }
                 case 150:
                     {
-                        diem = 0;
-                        txtdiem.Text = diem.ToString();
+
                         break;
                     }
                 case 165:
@@ -586,8 +602,6 @@ namespace Chiecnonkidieu
                     }
                 case 285:
                     {
-                        diem = diem / 2;
-                        txtdiem.Text = diem.ToString();
                         break;
                     }
                 case 300:
