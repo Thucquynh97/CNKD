@@ -51,10 +51,12 @@ namespace Chiecnonkidieu
             this.Hide();
         }
 
-        private void bthuongdan_Click(object sender, EventArgs e)
+        private void huongdan_Click(object sender, EventArgs e)
         {
             Formhuongdan frm = new Formhuongdan();
             frm.ShowDialog();
         }
+
+      
     }
 }

@@ -28,24 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txthuongdan = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formhuongdan));
             this.btthoat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txthuongdan
-            // 
-            this.txthuongdan.Location = new System.Drawing.Point(0, 0);
-            this.txthuongdan.Multiline = true;
-            this.txthuongdan.Name = "txthuongdan";
-            this.txthuongdan.Size = new System.Drawing.Size(520, 459);
-            this.txthuongdan.TabIndex = 0;
-            this.txthuongdan.Text = "ABC";
-            // 
             // btthoat
             // 
-            this.btthoat.Location = new System.Drawing.Point(445, 0);
+            this.btthoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btthoat.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btthoat.ForeColor = System.Drawing.Color.Crimson;
+            this.btthoat.Image = ((System.Drawing.Image)(resources.GetObject("btthoat.Image")));
+            this.btthoat.Location = new System.Drawing.Point(271, 444);
             this.btthoat.Name = "btthoat";
-            this.btthoat.Size = new System.Drawing.Size(75, 23);
+            this.btthoat.Size = new System.Drawing.Size(99, 37);
             this.btthoat.TabIndex = 1;
             this.btthoat.Text = "Thoát";
             this.btthoat.UseVisualStyleBackColor = true;
@@ -55,19 +50,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(525, 460);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(739, 493);
             this.Controls.Add(this.btthoat);
-            this.Controls.Add(this.txthuongdan);
+            this.DoubleBuffered = true;
             this.Name = "Formhuongdan";
             this.Text = "Hướng dẫn";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox txthuongdan;
         private System.Windows.Forms.Button btthoat;
+
     }
 }

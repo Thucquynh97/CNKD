@@ -40,7 +40,7 @@
             // 
             // txtmayman
             // 
-            this.txtmayman.Location = new System.Drawing.Point(461, 116);
+            this.txtmayman.Location = new System.Drawing.Point(436, 128);
             this.txtmayman.Name = "txtmayman";
             this.txtmayman.Size = new System.Drawing.Size(100, 20);
             this.txtmayman.TabIndex = 1;
@@ -48,7 +48,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(388, 142);
+            this.progressBar1.Location = new System.Drawing.Point(363, 154);
             this.progressBar1.Maximum = 95;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(173, 23);
@@ -65,7 +65,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(272, 142);
+            this.label1.Location = new System.Drawing.Point(247, 154);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 25);
             this.label1.TabIndex = 5;
@@ -77,7 +77,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(272, 114);
+            this.label2.Location = new System.Drawing.Point(247, 126);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(183, 25);
             this.label2.TabIndex = 5;
@@ -88,11 +88,11 @@
             this.btsubmit.BackgroundImage = global::Chiecnonkidieu.Properties.Resources.background1;
             this.btsubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btsubmit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btsubmit.Location = new System.Drawing.Point(578, 114);
+            this.btsubmit.Location = new System.Drawing.Point(554, 128);
             this.btsubmit.Name = "btsubmit";
-            this.btsubmit.Size = new System.Drawing.Size(75, 23);
+            this.btsubmit.Size = new System.Drawing.Size(82, 25);
             this.btsubmit.TabIndex = 2;
-            this.btsubmit.Text = "Submit";
+            this.btsubmit.Text = "May mắn";
             this.btsubmit.UseVisualStyleBackColor = true;
             this.btsubmit.Click += new System.EventHandler(this.btsubmit_Click);
             // 
