@@ -12,7 +12,7 @@ namespace Chiecnonkidieu
 {
     public partial class Formmain : Form
     {
-        Image img;
+        //Image img;
         Bitmap btm;
         public Formmain()
         {

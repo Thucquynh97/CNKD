@@ -229,3 +229,23 @@ C:\Users\VietNhan\Desktop\CNKD\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.cspr
 E:\KTPM\BTL_CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormChienthang.resources
 E:\KTPM\BTL_CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormYnghiacautraloi.resources
 >>>>>>> 3b89d02fafda90465a00c6b368e00c0c9853563e
+E:\KTPM\CNKD\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe.config
+E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.exe
+E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.pdb
+E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csprojResolveAssemblyReference.cache
+E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormChienthang.resources
+E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formdangnhap.resources
+E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formhuongdan.resources
+E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formmain.resources
+E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormPlaygame.resources
+E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formmayman.resources
+E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formluudiem.resources
+E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formtuychinh.resources
+E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormXemdiem.resources
+E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormYnghiacautraloi.resources
+E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Properties.Resources.resources
+E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.GenerateResource.Cache
+E:\KTPM\CNKD\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe
+E:\KTPM\CNKD\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.pdb
+E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formcauhoi.resources
+E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.SuaCauHoi.resources
