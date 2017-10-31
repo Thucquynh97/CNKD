@@ -29,7 +29,7 @@ namespace Chiecnonkidieu
             string mk = txtpassword.Text.Trim();
             if (tk == "phu" && mk == "12345")
             {
-                Formtuychinh frm = new Formtuychinh();
+                Formcauhoi frm = new Formcauhoi();
                 frm.Show();
                 this.Hide();
             }

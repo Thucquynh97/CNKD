@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Question.cs" />
     <Compile Include="Connectsql.cs" />
     <Compile Include="FormChienthang.cs">
       <SubType>Form</SubType>
@@ -90,11 +91,11 @@
     <Compile Include="FormMayMan.Designer.cs">
       <DependentUpon>FormMayMan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formtuychinh.cs">
+    <Compile Include="Formcauhoi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formtuychinh.Designer.cs">
-      <DependentUpon>Formtuychinh.cs</DependentUpon>
+    <Compile Include="Formcauhoi.Designer.cs">
+      <DependentUpon>Formcauhoi.cs</DependentUpon>
     </Compile>
     <Compile Include="FormXemdiem.cs">
       <SubType>Form</SubType>
@@ -111,6 +112,12 @@
     <Compile Include="Import.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SuaCauHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaCauHoi.Designer.cs">
+      <DependentUpon>SuaCauHoi.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormChienthang.resx">
       <DependentUpon>FormChienthang.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,8 +139,8 @@
     <EmbeddedResource Include="Formluudiem.resx">
       <DependentUpon>Formluudiem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formtuychinh.resx">
-      <DependentUpon>Formtuychinh.cs</DependentUpon>
+    <EmbeddedResource Include="Formcauhoi.resx">
+      <DependentUpon>Formcauhoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormXemdiem.resx">
       <DependentUpon>FormXemdiem.cs</DependentUpon>
@@ -151,6 +158,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SuaCauHoi.resx">
+      <DependentUpon>SuaCauHoi.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
