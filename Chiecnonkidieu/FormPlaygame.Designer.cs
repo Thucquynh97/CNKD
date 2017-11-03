@@ -109,7 +109,7 @@
             this.groupBox2.Controls.Add(this.bta);
             this.groupBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox2.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Crimson;
             this.groupBox2.Location = new System.Drawing.Point(13, 301);
             this.groupBox2.Name = "groupBox2";
@@ -120,7 +120,7 @@
             // 
             // btr
             // 
-            this.btr.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btr.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btr.Location = new System.Drawing.Point(14, 94);
             this.btr.Name = "btr";
             this.btr.Size = new System.Drawing.Size(35, 28);
@@ -139,7 +139,7 @@
             // 
             // btq
             // 
-            this.btq.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btq.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btq.Location = new System.Drawing.Point(342, 62);
             this.btq.Name = "btq";
             this.btq.Size = new System.Drawing.Size(35, 26);
@@ -150,7 +150,7 @@
             // 
             // btp
             // 
-            this.btp.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btp.Location = new System.Drawing.Point(301, 62);
             this.btp.Name = "btp";
             this.btp.Size = new System.Drawing.Size(35, 26);
@@ -161,7 +161,7 @@
             // 
             // bto
             // 
-            this.bto.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bto.Location = new System.Drawing.Point(260, 62);
             this.bto.Name = "bto";
             this.bto.Size = new System.Drawing.Size(35, 26);
@@ -172,7 +172,7 @@
             // 
             // btn
             // 
-            this.btn.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn.Location = new System.Drawing.Point(219, 62);
             this.btn.Name = "btn";
             this.btn.Size = new System.Drawing.Size(35, 26);
@@ -183,7 +183,7 @@
             // 
             // btm
             // 
-            this.btm.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btm.Location = new System.Drawing.Point(178, 62);
             this.btm.Name = "btm";
             this.btm.Size = new System.Drawing.Size(35, 26);
@@ -194,7 +194,7 @@
             // 
             // btz
             // 
-            this.btz.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btz.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btz.Location = new System.Drawing.Point(342, 94);
             this.btz.Name = "btz";
             this.btz.Size = new System.Drawing.Size(35, 28);
@@ -205,7 +205,7 @@
             // 
             // btw
             // 
-            this.btw.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btw.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btw.Location = new System.Drawing.Point(301, 94);
             this.btw.Name = "btw";
             this.btw.Size = new System.Drawing.Size(35, 28);
@@ -216,7 +216,7 @@
             // 
             // bty
             // 
-            this.bty.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bty.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bty.Location = new System.Drawing.Point(260, 94);
             this.bty.Name = "bty";
             this.bty.Size = new System.Drawing.Size(35, 28);
@@ -227,7 +227,7 @@
             // 
             // btx
             // 
-            this.btx.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btx.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btx.Location = new System.Drawing.Point(219, 94);
             this.btx.Name = "btx";
             this.btx.Size = new System.Drawing.Size(35, 28);
@@ -238,7 +238,7 @@
             // 
             // btv
             // 
-            this.btv.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btv.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btv.Location = new System.Drawing.Point(178, 94);
             this.btv.Name = "btv";
             this.btv.Size = new System.Drawing.Size(35, 28);
@@ -249,7 +249,7 @@
             // 
             // btu
             // 
-            this.btu.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btu.Location = new System.Drawing.Point(137, 94);
             this.btu.Name = "btu";
             this.btu.Size = new System.Drawing.Size(35, 28);
@@ -260,7 +260,7 @@
             // 
             // btt
             // 
-            this.btt.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btt.Location = new System.Drawing.Point(96, 94);
             this.btt.Name = "btt";
             this.btt.Size = new System.Drawing.Size(35, 28);
@@ -271,7 +271,7 @@
             // 
             // bts
             // 
-            this.bts.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bts.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bts.Location = new System.Drawing.Point(55, 94);
             this.bts.Name = "bts";
             this.bts.Size = new System.Drawing.Size(35, 28);
@@ -282,7 +282,7 @@
             // 
             // btj
             // 
-            this.btj.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btj.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btj.Location = new System.Drawing.Point(52, 62);
             this.btj.Name = "btj";
             this.btj.Size = new System.Drawing.Size(35, 26);
@@ -293,7 +293,7 @@
             // 
             // btl
             // 
-            this.btl.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btl.Location = new System.Drawing.Point(135, 62);
             this.btl.Name = "btl";
             this.btl.Size = new System.Drawing.Size(35, 26);
@@ -304,7 +304,7 @@
             // 
             // bti
             // 
-            this.bti.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bti.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bti.Location = new System.Drawing.Point(11, 62);
             this.bti.Name = "bti";
             this.bti.Size = new System.Drawing.Size(35, 26);
@@ -315,7 +315,7 @@
             // 
             // btk
             // 
-            this.btk.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btk.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btk.Location = new System.Drawing.Point(93, 62);
             this.btk.Name = "btk";
             this.btk.Size = new System.Drawing.Size(35, 26);
@@ -326,7 +326,7 @@
             // 
             // bth
             // 
-            this.bth.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bth.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bth.Location = new System.Drawing.Point(312, 29);
             this.bth.Name = "bth";
             this.bth.Size = new System.Drawing.Size(35, 27);
@@ -337,7 +337,7 @@
             // 
             // btg
             // 
-            this.btg.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btg.Location = new System.Drawing.Point(271, 29);
             this.btg.Name = "btg";
             this.btg.Size = new System.Drawing.Size(35, 27);
@@ -348,7 +348,7 @@
             // 
             // btf
             // 
-            this.btf.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btf.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btf.Location = new System.Drawing.Point(230, 29);
             this.btf.Name = "btf";
             this.btf.Size = new System.Drawing.Size(35, 27);
@@ -359,7 +359,7 @@
             // 
             // bte
             // 
-            this.bte.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bte.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bte.Location = new System.Drawing.Point(189, 29);
             this.bte.Name = "bte";
             this.bte.Size = new System.Drawing.Size(35, 27);
@@ -370,7 +370,7 @@
             // 
             // btd
             // 
-            this.btd.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btd.Location = new System.Drawing.Point(148, 29);
             this.btd.Name = "btd";
             this.btd.Size = new System.Drawing.Size(35, 27);
@@ -381,7 +381,7 @@
             // 
             // btc
             // 
-            this.btc.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btc.Location = new System.Drawing.Point(107, 29);
             this.btc.Name = "btc";
             this.btc.Size = new System.Drawing.Size(35, 27);
@@ -392,7 +392,7 @@
             // 
             // btb
             // 
-            this.btb.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btb.Location = new System.Drawing.Point(66, 29);
             this.btb.Name = "btb";
             this.btb.Size = new System.Drawing.Size(35, 27);
@@ -403,7 +403,7 @@
             // 
             // bta
             // 
-            this.bta.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bta.Location = new System.Drawing.Point(25, 29);
             this.bta.Name = "bta";
             this.bta.Size = new System.Drawing.Size(35, 27);
@@ -415,7 +415,7 @@
             // btchoi
             // 
             this.btchoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btchoi.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btchoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btchoi.ForeColor = System.Drawing.Color.Crimson;
             this.btchoi.Image = ((System.Drawing.Image)(resources.GetObject("btchoi.Image")));
             this.btchoi.Location = new System.Drawing.Point(153, 235);
@@ -429,7 +429,7 @@
             // btthoat
             // 
             this.btthoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btthoat.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btthoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btthoat.ForeColor = System.Drawing.Color.Crimson;
             this.btthoat.Image = ((System.Drawing.Image)(resources.GetObject("btthoat.Image")));
             this.btthoat.Location = new System.Drawing.Point(153, 266);
@@ -578,7 +578,9 @@
             this.Controls.Add(this.btchoi);
             this.Controls.Add(this.groupBox2);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPlaygame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chiếc nón kì diệu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPlaygame_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);

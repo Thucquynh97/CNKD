@@ -25,10 +25,13 @@ namespace Chiecnonkidieu
         {
             cnstr = ConfigurationManager.ConnectionStrings["cnstr"].ConnectionString;
             cn = new SqlConnection(cnstr);
-            list = ExecuteReader("SELECT * FROM Question");
+            GetData();
+        }
+        public void GetData()
+        {
+            list = ExecuteReader("SELECT * FROM Question ORDER BY ID");
             dgv.DataSource = list;
         }
-
         public List<object> ExecuteReader(string sql)
         {
             Connect();
@@ -78,20 +81,27 @@ namespace Chiecnonkidieu
             SqlCommand cmd = new SqlCommand("uspDelete", cn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new SqlParameter("id", id));
-            Disconnect();
             return cmd.ExecuteNonQuery();
+            Disconnect();
         }
-        public void Add(int id)
+        public void Add()
         {
+            string cauhoi, cautraloi, giaithich;
+            cauhoi = txtcauhoi.Text.Trim();
+            cautraloi = txtcautraloi.Text.Trim();
+            giaithich = txtgiaithich.Text.Trim();
             Connect();
-            SqlCommand cmd = new SqlCommand("uspSua", cn);
+            SqlCommand cmd = new SqlCommand("uspThem", cn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("id", id));
+            cmd.Parameters.Add(new SqlParameter("cauhoi", cauhoi));
+            cmd.Parameters.Add(new SqlParameter("cautraloi", cautraloi));
+            cmd.Parameters.Add(new SqlParameter("giaithich", giaithich));
+            cmd.ExecuteNonQuery();
             Disconnect();
         }
         private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn && dgv.Columns[e.ColumnIndex].Name == "Delete")
+            if(dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn && dgv.Columns[e.ColumnIndex].Name == "Xoa")
             {
                 int row = e.RowIndex;
                 int id = int.Parse(dgv.Rows[row].Cells["ID"].Value.ToString());
@@ -100,23 +110,22 @@ namespace Chiecnonkidieu
                 {
                     MessageBox.Show("Đã Xóa");
                 }
-                list = ExecuteReader("SELECT * FROM Question");
-                dgv.DataSource = list;
-            }
-            else if (dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn && dgv.Columns[e.ColumnIndex].Name == "Sua")
-            {
-                int row = e.RowIndex;
-                int id = int.Parse(dgv.Rows[row].Cells["ID"].Value.ToString());
-                int NumOfDelete = Delete(id);
-                if (NumOfDelete > 0)
-                {
-                    MessageBox.Show("Đã Xóa");
-                }
-                list = ExecuteReader("SELECT * FROM Question");
-                dgv.DataSource = list;
+                GetData();
             }
 
+        }
 
+        private void btThem_Click(object sender, EventArgs e)
+        {
+            Add();
+            GetData();
+        }
+
+        private void btThoat_Click(object sender, EventArgs e)
+        {
+            Formmain frm = new Formmain();
+            frm.Show();
+            this.Hide();
         }
     }
 }

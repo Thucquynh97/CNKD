@@ -35,7 +35,7 @@
             // btthoat
             // 
             this.btthoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btthoat.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btthoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btthoat.ForeColor = System.Drawing.Color.Crimson;
             this.btthoat.Image = ((System.Drawing.Image)(resources.GetObject("btthoat.Image")));
             this.btthoat.Location = new System.Drawing.Point(271, 444);
@@ -55,7 +55,9 @@
             this.ClientSize = new System.Drawing.Size(739, 493);
             this.Controls.Add(this.btthoat);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Formhuongdan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hướng dẫn";
             this.ResumeLayout(false);
 

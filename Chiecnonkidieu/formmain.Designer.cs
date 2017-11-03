@@ -120,9 +120,10 @@
             this.Controls.Add(this.thoat);
             this.Controls.Add(this.xemdiem);
             this.Controls.Add(this.playgane);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Formmain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chiếc nón kỳ diệu";
-            this.Load += new System.EventHandler(this.Formmain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.playgane)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xemdiem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.thoat)).EndInit();

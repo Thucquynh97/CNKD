@@ -19,11 +19,6 @@ namespace Chiecnonkidieu
             InitializeComponent();
         }
 
-        private void Formmain_Load(object sender, EventArgs e)
-        {
-
-            
-        }
         private void playgane_Click(object sender, EventArgs e)
         {
             FormPlaygame frm = new FormPlaygame();

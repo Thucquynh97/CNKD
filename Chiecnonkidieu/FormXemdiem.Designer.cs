@@ -82,7 +82,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgv);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormXemdiem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xem Điểm";
             this.Load += new System.EventHandler(this.FormXemdiem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();

@@ -41,5 +41,12 @@ namespace Chiecnonkidieu
                     MessageBox.Show("Bạn Nhập sai tên đăng nhập hoặc mật khẩu");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Formmain frm = new Formmain();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

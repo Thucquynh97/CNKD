@@ -107,7 +107,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.txtmayman);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Formmayman";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "May Mắn";
             this.Load += new System.EventHandler(this.Formmayman_Load);
             this.ResumeLayout(false);
