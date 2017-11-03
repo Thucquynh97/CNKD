@@ -28,15 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormYnghiacautraloi));
             this.button1 = new System.Windows.Forms.Button();
             this.txttext = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(114, 226);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(100, 259);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(117, 36);
             this.button1.TabIndex = 0;
             this.button1.Text = "Tiếp tục";
             this.button1.UseVisualStyleBackColor = true;
@@ -44,21 +49,30 @@
             // 
             // txttext
             // 
-            this.txttext.Location = new System.Drawing.Point(0, 0);
+            this.txttext.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttext.ForeColor = System.Drawing.Color.Purple;
+            this.txttext.Location = new System.Drawing.Point(1, 0);
             this.txttext.Multiline = true;
             this.txttext.Name = "txttext";
-            this.txttext.Size = new System.Drawing.Size(283, 200);
+            this.txttext.Size = new System.Drawing.Size(338, 242);
             this.txttext.TabIndex = 1;
             // 
             // FormYnghiacautraloi
             // 
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(340, 307);
             this.Controls.Add(this.txttext);
             this.Controls.Add(this.button1);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormYnghiacautraloi";
-            this.Text = "FormYnghiacautraloi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Ý Nghĩa Câu Trả Lời";
             this.Load += new System.EventHandler(this.FormYnghiacautraloi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

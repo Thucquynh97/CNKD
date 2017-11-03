@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="dgv.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="button1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1036,6 +1042,9 @@
         1E8GU2f/2Q==
 </value>
   </data>
+  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIYAAAA2CAYAAAACs+HkAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -1407,10 +1416,13 @@
         or8CQ9wCKIAh/IU5AfG3wHDWyoSXvrhOwu1sKMP/B8kdFa3WbLL4AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAp0AAAGsCAIAAAAQeYv8AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAA/7JJREFUeF68/QV3HEvTJYxWcwstM+PxMcsWo2XLzLZkkJlBzGzJlsXMzMzUYpbM
+        vQAADr0BR/uQrQAA/7JJREFUeF68/QV3HEvTJYxWcwstM+PxMcsWo2XLzLZkkJlBzGzJlsXMzMzUYpbM
         JFuSZTjP885372+5OzK727KOzzPvzDdz19orV3Z1VlZWVWbsiMjILEEsmM2FRGT+W/xTMZnEUiq2+F0B
         gkgwEQmmVFKwBBRSW7FggYxMbC2XWuFEudRSX9d+8cKD2grn1fNPEP5vQ2wpCKaCYC6SWC1feXrDpktK
         5V78lEisxWIr3AJuhN8Lh1RkIxGstT81B63mNfvv0N44ngYw718t5jdPA/ylrYGXlKihboAW2lYBcxvP

@@ -50,8 +50,6 @@ namespace Chiecnonkidieu
         {
             Formhuongdan frm = new Formhuongdan();
             frm.ShowDialog();
-        }
-
-      
+        }    
     }
 }

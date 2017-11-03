@@ -38,9 +38,9 @@
             // dgv
             // 
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Location = new System.Drawing.Point(227, 75);
+            this.dgv.Location = new System.Drawing.Point(265, 87);
             this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(244, 246);
+            this.dgv.Size = new System.Drawing.Size(285, 284);
             this.dgv.TabIndex = 0;
             this.dgv.TabStop = false;
             // 
@@ -50,9 +50,9 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Crimson;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(297, 356);
+            this.button1.Location = new System.Drawing.Point(346, 411);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 34);
+            this.button1.Size = new System.Drawing.Size(125, 39);
             this.button1.TabIndex = 1;
             this.button1.Text = "Xác Nhận";
             this.button1.UseVisualStyleBackColor = true;
@@ -66,7 +66,7 @@
             this.label1.ForeColor = System.Drawing.Color.MediumVioletRed;
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(290, 21);
+            this.label1.Location = new System.Drawing.Point(338, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 39);
             this.label1.TabIndex = 4;
@@ -74,14 +74,15 @@
             // 
             // FormXemdiem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(628, 431);
+            this.ClientSize = new System.Drawing.Size(733, 497);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgv);
+            this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormXemdiem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

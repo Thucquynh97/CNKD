@@ -59,11 +59,11 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(97, 76);
+            this.button1.Location = new System.Drawing.Point(97, 83);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(101, 28);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Submit";
+            this.button1.Text = "Xác Nhận";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

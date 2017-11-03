@@ -30,9 +30,9 @@ namespace Chiecnonkidieu
             {
                 int r = rand.Next(0, dt.Rows.Count-1);
 
-                arrQuestion.Add(dt.Rows[r][0]);
-                arrAnswer1.Add(dt.Rows[r][1]);
-                arrAnswer2.Add(dt.Rows[r][2]);
+                arrQuestion.Add(dt.Rows[r][1]);
+                arrAnswer1.Add(dt.Rows[r][2]);
+                arrAnswer2.Add(dt.Rows[r][3]);
             }
 ;        }
         public void ImportPoint(SqlConnection cn, string name, int point)

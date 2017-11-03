@@ -50,9 +50,9 @@
             this.btdangnhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btdangnhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btdangnhap.ForeColor = System.Drawing.Color.Crimson;
-            this.btdangnhap.Location = new System.Drawing.Point(19, 115);
+            this.btdangnhap.Location = new System.Drawing.Point(16, 115);
             this.btdangnhap.Name = "btdangnhap";
-            this.btdangnhap.Size = new System.Drawing.Size(96, 27);
+            this.btdangnhap.Size = new System.Drawing.Size(105, 32);
             this.btdangnhap.TabIndex = 3;
             this.btdangnhap.Text = "Đăng Nhập";
             this.btdangnhap.UseVisualStyleBackColor = true;
@@ -98,7 +98,7 @@
             this.button1.ForeColor = System.Drawing.Color.Crimson;
             this.button1.Location = new System.Drawing.Point(139, 115);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 27);
+            this.button1.Size = new System.Drawing.Size(96, 32);
             this.button1.TabIndex = 3;
             this.button1.Text = "Thoát";
             this.button1.UseVisualStyleBackColor = true;
@@ -109,8 +109,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(254, 154);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(266, 172);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btdangnhap);
             this.Controls.Add(this.txtpassword);
@@ -120,7 +120,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Formdangnhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
+            this.Text = "Đăng Nhập";
             this.Load += new System.EventHandler(this.Formdangnhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

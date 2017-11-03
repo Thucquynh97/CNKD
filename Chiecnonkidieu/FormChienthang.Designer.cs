@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChienthang));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,9 +41,8 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(41, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(335, 25);
+            this.label1.Size = new System.Drawing.Size(0, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Chúc mừng bạn đã trả lời đúng";
             // 
             // label2
             // 
@@ -50,9 +50,8 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 25);
+            this.label2.Size = new System.Drawing.Size(0, 25);
             this.label2.TabIndex = 0;
-            this.label2.Text = "+ 500 điểm";
             // 
             // label3
             // 
@@ -60,15 +59,19 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 73);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 25);
+            this.label3.Size = new System.Drawing.Size(0, 25);
             this.label3.TabIndex = 0;
-            this.label3.Text = "+ 1 mạng";
             // 
             // bttieptuc
             // 
-            this.bttieptuc.Location = new System.Drawing.Point(301, 73);
+            this.bttieptuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttieptuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttieptuc.ForeColor = System.Drawing.Color.DarkGreen;
+            this.bttieptuc.Image = ((System.Drawing.Image)(resources.GetObject("bttieptuc.Image")));
+            this.bttieptuc.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bttieptuc.Location = new System.Drawing.Point(165, 217);
             this.bttieptuc.Name = "bttieptuc";
-            this.bttieptuc.Size = new System.Drawing.Size(75, 23);
+            this.bttieptuc.Size = new System.Drawing.Size(91, 34);
             this.bttieptuc.TabIndex = 1;
             this.bttieptuc.Text = "Tiếp tục";
             this.bttieptuc.UseVisualStyleBackColor = true;
@@ -78,13 +81,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(415, 132);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(408, 263);
             this.Controls.Add(this.bttieptuc);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormChienthang";
-            this.Text = "FormChienthang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Chúc Mừng Chiến Thắng";
             this.ResumeLayout(false);
             this.PerformLayout();
 
