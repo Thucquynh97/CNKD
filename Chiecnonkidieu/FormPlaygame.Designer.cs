@@ -109,8 +109,8 @@
             this.groupBox2.Controls.Add(this.bta);
             this.groupBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.Crimson;
+            this.groupBox2.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.groupBox2.Location = new System.Drawing.Point(13, 301);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(387, 141);
@@ -415,10 +415,10 @@
             // btchoi
             // 
             this.btchoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btchoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btchoi.ForeColor = System.Drawing.Color.Crimson;
+            this.btchoi.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btchoi.ForeColor = System.Drawing.Color.Red;
             this.btchoi.Image = ((System.Drawing.Image)(resources.GetObject("btchoi.Image")));
-            this.btchoi.Location = new System.Drawing.Point(153, 235);
+            this.btchoi.Location = new System.Drawing.Point(136, 238);
             this.btchoi.Name = "btchoi";
             this.btchoi.Size = new System.Drawing.Size(84, 28);
             this.btchoi.TabIndex = 1;
@@ -429,10 +429,10 @@
             // btthoat
             // 
             this.btthoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btthoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btthoat.ForeColor = System.Drawing.Color.Crimson;
+            this.btthoat.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btthoat.ForeColor = System.Drawing.Color.Red;
             this.btthoat.Image = ((System.Drawing.Image)(resources.GetObject("btthoat.Image")));
-            this.btthoat.Location = new System.Drawing.Point(153, 266);
+            this.btthoat.Location = new System.Drawing.Point(136, 269);
             this.btthoat.Name = "btthoat";
             this.btthoat.Size = new System.Drawing.Size(84, 28);
             this.btthoat.TabIndex = 2;
@@ -444,7 +444,8 @@
             // 
             this.gbdapan.BackColor = System.Drawing.Color.Transparent;
             this.gbdapan.Controls.Add(this.lbstatus);
-            this.gbdapan.ForeColor = System.Drawing.Color.Crimson;
+            this.gbdapan.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbdapan.ForeColor = System.Drawing.Color.AliceBlue;
             this.gbdapan.Location = new System.Drawing.Point(12, 100);
             this.gbdapan.Name = "gbdapan";
             this.gbdapan.Size = new System.Drawing.Size(650, 121);
@@ -465,10 +466,10 @@
             // 
             this.txtdiem.Enabled = false;
             this.txtdiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdiem.Location = new System.Drawing.Point(73, 248);
+            this.txtdiem.Location = new System.Drawing.Point(68, 242);
             this.txtdiem.Multiline = true;
             this.txtdiem.Name = "txtdiem";
-            this.txtdiem.Size = new System.Drawing.Size(47, 20);
+            this.txtdiem.Size = new System.Drawing.Size(62, 26);
             this.txtdiem.TabIndex = 6;
             this.txtdiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -484,11 +485,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Crimson;
-            this.label2.Location = new System.Drawing.Point(16, 245);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Lime;
+            this.label2.Location = new System.Drawing.Point(4, 242);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 15);
+            this.label2.Size = new System.Drawing.Size(57, 24);
             this.label2.TabIndex = 7;
             this.label2.Text = "Điểm";
             // 
@@ -496,10 +497,10 @@
             // 
             this.txtMang.Enabled = false;
             this.txtMang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMang.Location = new System.Drawing.Point(73, 273);
+            this.txtMang.Location = new System.Drawing.Point(68, 273);
             this.txtMang.Multiline = true;
             this.txtMang.Name = "txtMang";
-            this.txtMang.Size = new System.Drawing.Size(47, 20);
+            this.txtMang.Size = new System.Drawing.Size(62, 24);
             this.txtMang.TabIndex = 6;
             this.txtMang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -507,11 +508,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Crimson;
-            this.label3.Location = new System.Drawing.Point(16, 272);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Lime;
+            this.label3.Location = new System.Drawing.Point(4, 269);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 15);
+            this.label3.Size = new System.Drawing.Size(62, 24);
             this.label3.TabIndex = 7;
             this.label3.Text = "Mạng";
             // 

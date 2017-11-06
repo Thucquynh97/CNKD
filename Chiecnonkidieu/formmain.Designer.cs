@@ -49,7 +49,7 @@
             this.playgane.Cursor = System.Windows.Forms.Cursors.Hand;
             this.playgane.Location = new System.Drawing.Point(319, 53);
             this.playgane.Name = "playgane";
-            this.playgane.Size = new System.Drawing.Size(148, 116);
+            this.playgane.Size = new System.Drawing.Size(162, 116);
             this.playgane.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.playgane.TabIndex = 1;
             this.playgane.TabStop = false;
@@ -61,9 +61,9 @@
             this.xemdiem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("xemdiem.BackgroundImage")));
             this.xemdiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.xemdiem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.xemdiem.Location = new System.Drawing.Point(467, 114);
+            this.xemdiem.Location = new System.Drawing.Point(478, 132);
             this.xemdiem.Name = "xemdiem";
-            this.xemdiem.Size = new System.Drawing.Size(136, 101);
+            this.xemdiem.Size = new System.Drawing.Size(153, 134);
             this.xemdiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.xemdiem.TabIndex = 1;
             this.xemdiem.TabStop = false;
@@ -75,9 +75,9 @@
             this.thoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("thoat.BackgroundImage")));
             this.thoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.thoat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.thoat.Location = new System.Drawing.Point(332, 358);
+            this.thoat.Location = new System.Drawing.Point(336, 338);
             this.thoat.Name = "thoat";
-            this.thoat.Size = new System.Drawing.Size(173, 102);
+            this.thoat.Size = new System.Drawing.Size(145, 126);
             this.thoat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.thoat.TabIndex = 1;
             this.thoat.TabStop = false;
@@ -89,9 +89,9 @@
             this.tuychinh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tuychinh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tuychinh.Image = ((System.Drawing.Image)(resources.GetObject("tuychinh.Image")));
-            this.tuychinh.Location = new System.Drawing.Point(467, 234);
+            this.tuychinh.Location = new System.Drawing.Point(478, 274);
             this.tuychinh.Name = "tuychinh";
-            this.tuychinh.Size = new System.Drawing.Size(136, 122);
+            this.tuychinh.Size = new System.Drawing.Size(153, 115);
             this.tuychinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tuychinh.TabIndex = 2;
             this.tuychinh.TabStop = false;
@@ -104,7 +104,7 @@
             this.huongdan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.huongdan.Location = new System.Drawing.Point(326, 175);
             this.huongdan.Name = "huongdan";
-            this.huongdan.Size = new System.Drawing.Size(141, 129);
+            this.huongdan.Size = new System.Drawing.Size(155, 125);
             this.huongdan.TabIndex = 3;
             this.huongdan.TabStop = false;
             this.huongdan.Click += new System.EventHandler(this.huongdan_Click);
@@ -114,7 +114,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackgroundImage = global::Chiecnonkidieu.Properties.Resources.background;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(664, 476);
             this.Controls.Add(this.huongdan);
             this.Controls.Add(this.tuychinh);
