@@ -445,9 +445,9 @@
             this.gbdapan.BackColor = System.Drawing.Color.Transparent;
             this.gbdapan.Controls.Add(this.lbstatus);
             this.gbdapan.ForeColor = System.Drawing.Color.Crimson;
-            this.gbdapan.Location = new System.Drawing.Point(12, 80);
+            this.gbdapan.Location = new System.Drawing.Point(12, 100);
             this.gbdapan.Name = "gbdapan";
-            this.gbdapan.Size = new System.Drawing.Size(650, 149);
+            this.gbdapan.Size = new System.Drawing.Size(650, 121);
             this.gbdapan.TabIndex = 4;
             this.gbdapan.TabStop = false;
             this.gbdapan.Text = "Đáp Án";
@@ -519,7 +519,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Enabled = false;
-            this.pictureBox1.Location = new System.Drawing.Point(505, 301);
+            this.pictureBox1.Location = new System.Drawing.Point(400, 320);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(290, 290);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -538,10 +538,10 @@
             // 
             // lbchoi
             // 
-            this.lbchoi.BackColor = System.Drawing.Color.SkyBlue;
+            this.lbchoi.BackColor = System.Drawing.Color.Transparent;
             this.lbchoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbchoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lbchoi.Location = new System.Drawing.Point(13, 5);
+            this.lbchoi.ForeColor = System.Drawing.Color.White;
+            this.lbchoi.Location = new System.Drawing.Point(12, 17);
             this.lbchoi.Name = "lbchoi";
             this.lbchoi.Size = new System.Drawing.Size(649, 71);
             this.lbchoi.TabIndex = 11;
@@ -550,12 +550,12 @@
             // lbthongbao
             // 
             this.lbthongbao.BackColor = System.Drawing.Color.Transparent;
-            this.lbthongbao.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbthongbao.ForeColor = System.Drawing.Color.DeepPink;
+            this.lbthongbao.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbthongbao.ForeColor = System.Drawing.Color.Red;
             this.lbthongbao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbthongbao.Location = new System.Drawing.Point(243, 232);
+            this.lbthongbao.Location = new System.Drawing.Point(268, 232);
             this.lbthongbao.Name = "lbthongbao";
-            this.lbthongbao.Size = new System.Drawing.Size(419, 62);
+            this.lbthongbao.Size = new System.Drawing.Size(349, 62);
             this.lbthongbao.TabIndex = 1;
             this.lbthongbao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
