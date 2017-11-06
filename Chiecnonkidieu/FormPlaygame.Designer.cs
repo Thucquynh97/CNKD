@@ -538,7 +538,7 @@
             // 
             // lbchoi
             // 
-            this.lbchoi.BackColor = System.Drawing.Color.Lavender;
+            this.lbchoi.BackColor = System.Drawing.Color.SkyBlue;
             this.lbchoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbchoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.lbchoi.Location = new System.Drawing.Point(13, 5);
@@ -549,10 +549,9 @@
             // 
             // lbthongbao
             // 
-            this.lbthongbao.BackColor = System.Drawing.Color.White;
+            this.lbthongbao.BackColor = System.Drawing.Color.Transparent;
             this.lbthongbao.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbthongbao.ForeColor = System.Drawing.Color.DeepPink;
-            this.lbthongbao.Image = ((System.Drawing.Image)(resources.GetObject("lbthongbao.Image")));
             this.lbthongbao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbthongbao.Location = new System.Drawing.Point(243, 232);
             this.lbthongbao.Name = "lbthongbao";

@@ -123,6 +123,10 @@ namespace Chiecnonkidieu
 
             FormChienthang frm1 = new FormChienthang();
             frm1.ShowDialog();
+            diem++;
+            soMang++;
+            txtdiem.Text = diem.ToString();
+            txtMang.Text = soMang.ToString();
             FormYnghiacautraloi frm2 = new FormYnghiacautraloi(numQuest);
             frm2.ShowDialog();
             picture.Clear();

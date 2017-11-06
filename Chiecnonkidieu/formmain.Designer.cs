@@ -34,9 +34,6 @@
             this.thoat = new System.Windows.Forms.PictureBox();
             this.tuychinh = new System.Windows.Forms.PictureBox();
             this.huongdan = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.playgane)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xemdiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.thoat)).BeginInit();
@@ -102,6 +99,7 @@
             // 
             // huongdan
             // 
+            this.huongdan.BackColor = System.Drawing.Color.Transparent;
             this.huongdan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("huongdan.BackgroundImage")));
             this.huongdan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.huongdan.Location = new System.Drawing.Point(326, 175);
@@ -111,37 +109,13 @@
             this.huongdan.TabStop = false;
             this.huongdan.Click += new System.EventHandler(this.huongdan_Click);
             // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(502, 358);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 101);
-            this.label1.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(467, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 58);
-            this.label2.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(331, 307);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 49);
-            this.label3.TabIndex = 5;
-            // 
             // Formmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackgroundImage = global::Chiecnonkidieu.Properties.Resources.background;
-            this.ClientSize = new System.Drawing.Size(691, 497);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(664, 476);
             this.Controls.Add(this.huongdan);
             this.Controls.Add(this.tuychinh);
             this.Controls.Add(this.thoat);
@@ -166,8 +140,5 @@
         private System.Windows.Forms.PictureBox thoat;
         private System.Windows.Forms.PictureBox tuychinh;
         private System.Windows.Forms.PictureBox huongdan;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
     }
 }
