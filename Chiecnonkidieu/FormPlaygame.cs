@@ -123,7 +123,7 @@ namespace Chiecnonkidieu
 
             FormChienthang frm1 = new FormChienthang();
             frm1.ShowDialog();
-            diem++;
+            diem+=500;
             soMang++;
             txtdiem.Text = diem.ToString();
             txtMang.Text = soMang.ToString();
@@ -302,7 +302,7 @@ namespace Chiecnonkidieu
                 timer1.Interval = 30;
                 timer1.Start();
                 timer2.Start();
-                flag = true;
+                
             }
             else
             {
@@ -667,6 +667,7 @@ namespace Chiecnonkidieu
             {
                 timer1.Stop();
                 Showpoint(ketqua);
+                flag = true;
             }
         }
 
