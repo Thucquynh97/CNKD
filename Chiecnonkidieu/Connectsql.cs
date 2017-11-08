@@ -15,7 +15,6 @@ namespace Chiecnonkidieu
         public static ArrayList arrQuestion { get; set; }
         public static ArrayList arrAnswer1 { get; set; }
         public static ArrayList arrAnswer2 { get; set; }
-        private Random rand;
         public SqlConnection mysql { get; set; }
         public Connectsql()
         {
@@ -92,7 +91,6 @@ namespace Chiecnonkidieu
         }
         public void ImportQA(SqlConnection cn, string str)
         {
-            rand = new Random();
 
             arrQuestion = new ArrayList();
             arrAnswer1 = new ArrayList();
@@ -102,11 +100,9 @@ namespace Chiecnonkidieu
             da.Fill(dt);
             for (int j = 0; j < dt.Rows.Count; j++)
             {
-                int r = rand.Next(0, dt.Rows.Count);
-
-                arrQuestion.Add(dt.Rows[r][1]);
-                arrAnswer1.Add(dt.Rows[r][2]);
-                arrAnswer2.Add(dt.Rows[r][3]);
+                arrQuestion.Add(dt.Rows[j][1]);
+                arrAnswer1.Add(dt.Rows[j][2]);
+                arrAnswer2.Add(dt.Rows[j][3]);
             }
 ;
         }

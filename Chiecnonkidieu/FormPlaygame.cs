@@ -26,13 +26,15 @@ namespace Chiecnonkidieu
         private float width;
         private float height;
         private List<PictureBox> picture = new List<PictureBox>();
-        private int numQuest { get; set; } //câu hỏi : 0 = câu 1
+        private int numQuest;
+        private Random rand;
         private int answerLength = 0; //kiểm tra người dùng trả lời xong câu hỏi chưa
         private int diem = 0;
         private int soMang; //mạng của người chơi
         private int space = 0;  //biến đếm số khoảng trắng trong cau trả lời
         private int countselecttrue = 0; //đém ký tự khi người dùng chọn, vd : Lai van sam , chứ A có 3 chữ
         private ArrayList selected; // mảng chứa kí tự đúng của ng dùng
+        private int IQ = 0; //Biến đếm i hiện thông báo số câu hỏi Question
         public static int select { get; set; }//lựa chọn ô may mắn của người dùng
         private Connectsql cn = null;
         private Functionplaygame Func = null;
@@ -45,6 +47,7 @@ namespace Chiecnonkidieu
         {
             cn = new Connectsql();
             Func = new Functionplaygame();
+            rand = new Random();
             selected = new ArrayList();
             img = Image.FromFile(Application.StartupPath + @"\chiecnon.png");
             txtMang.Text = "";
@@ -78,6 +81,11 @@ namespace Chiecnonkidieu
                 // MessageBox.Show("Bạn chưa quay chiếc nón kỳ diệu","Cảnh Báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
+        private int RandQuestion()
+        {
+            numQuest = rand.Next(0, Connectsql.arrQuestion.Count);
+            return numQuest;
+        }
         private void NextQuestion() //chuyển sang câu hỏi mới
         {
 
@@ -90,29 +98,35 @@ namespace Chiecnonkidieu
             FormYnghiacautraloi frm2 = new FormYnghiacautraloi(numQuest);
             frm2.ShowDialog();
             picture.Clear();
-            numQuest++;
+            RandQuestion();
             space = 0;
             answerLength = 0; //reset lại biến space và answerLength
-            Func.AddPicturebox(gbdapan, numQuest, space, picture);
-            lbchoi.Text = "Câu " + (numQuest + 1) + " :" + Connectsql.arrQuestion[numQuest].ToString();
+            AddPic();
             lbthongbao.Text = "";
             EnableTrue();
             selected.Clear();
+        }
+        private void AddPic()
+        {
+            IQ++;
+            lbchoi.Text = "Câu " + IQ + " :" + Connectsql.arrQuestion[numQuest].ToString();
+            Func.gbdapan = gbdapan;
+            picture = Func.AddPicturebox(numQuest, ref space);
         }
         ///////////////////////////////////////////
         //Xử lý nút "Chơi"
         private void btchoi_Click(object sender, EventArgs e)
         {
-            numQuest = 0;
+            
             cn.Connect();
             cn.ImportQA(cn.mysql, "SELECT *FROM Question");
-            soMang = 5;
+            RandQuestion();
+            soMang = 2;
             txtMang.Text = soMang.ToString();
             txtdiem.Text = diem.ToString();
             groupBox2.Enabled = true;
             EnableTrue();
-            lbchoi.Text = "Câu " + (numQuest + 1) + " :" + Connectsql.arrQuestion[numQuest].ToString();
-            Func.AddPicturebox(gbdapan, numQuest, space, picture);
+            AddPic();
             pictureBox1.Enabled = true;
             btchoi.Enabled = false;
         }
@@ -121,55 +135,32 @@ namespace Chiecnonkidieu
         //Chọn câu hỏi
         private void SelectQuestion(int question, char charClicked)
         {
-            bool flagmess = true; //kiểm soát chỉ cho hiện 1 lần  MessageBox.Show("Bạn đã trả lời đúng!"); Hàm selectQuestion
-            Connectsql.arrAnswer1[question] = Connectsql.arrAnswer1[question].ToString().ToUpper();
-
-            //Người chơi chọn đúng kí tự trong câu trả lời
-            if (Connectsql.arrAnswer1[question].ToString().Contains(charClicked))
+          if(Func.CheckCharClicked(charClicked,question) == 1)
             {
-                lbstatus.Parent = gbdapan;
-                char[] wordchar = Connectsql.arrAnswer1[question].ToString().ToCharArray(); // chuyển chuỗi kết quả thành mảng kí tự
-
-                for (int i = 0; i < wordchar.Length; i++)
-                {
-                    if (charClicked == wordchar[i])
-                    {
-                        selected.Add(wordchar[i]);
-                        answerLength++;
-                        if (flagmess == true)
-                        {
-                            for (int j = 0; j < wordchar.Length; j++) //khi người dùng chọn 1 chữ cái thì hàm sẽ kiểm tra xem                              
-                            {                                         //chữ đó có bao nhiêu chữ trong kết quả
-                                if (charClicked == wordchar[j])
-                                    countselecttrue++;
-                            }
-                            lbthongbao.Text = "Bạn đã trả lời đúng, có " + countselecttrue + " chữ " + charClicked;
-
-                            flagmess = false;
-                        }
-                        picture[i].Text = charClicked.ToString();
-                        picture[i].Image = Image.FromFile(Application.StartupPath + @"\Picture\" + charClicked.ToString() + ".png");
-                        Addpoint(ketqua);
-                        txtdiem.Text = diem.ToString();
-                    }
-                }
-                //MessageBox.Show("Có " + countselecttrue + " chữ " + charClicked);
-                countselecttrue = 0;
+                selected = Func.selected;
+                answerLength = Func.answerLength;
+                lbthongbao.Text = Func.lbthongbao;
+                picture = Func.picture;
+                countselecttrue = Func.countselecttrue;
+                for(int i = 0; i < countselecttrue; i++)
+                    Addpoint(ketqua);
+                txtdiem.Text = diem.ToString();
                 EnableFalse(charClicked);
             }
-            else
+          else
             {
-                lbthongbao.Text = "Bạn đã trả lời sai";
-                if (soMang > 1)
-                    soMang--;
-                else
-                {
-                    soMang--;
-                    txtMang.Text = soMang.ToString();
-                    MessageBox.Show("Ban da thua\nDiem cua ban: " + diem.ToString());
-                }
+                soMang--;
                 txtMang.Text = soMang.ToString();
+                if (soMang == 0)
+                {
+                    MessageBox.Show("Bạn đã thua\nĐiểm của bạn là : " + diem.ToString());
+                    Endgame();
+                }
+                else
+                    lbthongbao.Text = "Bạn đã trả lời sai";
+                
             }
+
         }
 
         ///////////////////////////////////////////
@@ -260,6 +251,7 @@ namespace Chiecnonkidieu
                 timer1.Interval = 30;
                 timer1.Start();
                 timer2.Start();
+                btthoat.Enabled = false;
                 
             }
             else
@@ -640,6 +632,7 @@ namespace Chiecnonkidieu
                 timer2.Enabled = false;
                 timer2.Stop();
                 count = 0;
+                btthoat.Enabled = true;
             }
         }
 

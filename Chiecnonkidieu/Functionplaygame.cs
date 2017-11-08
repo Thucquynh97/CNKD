@@ -15,11 +15,25 @@ using System.Configuration;
 
 namespace Chiecnonkidieu
 {
-    public class Functionplaygame 
+    public class Functionplaygame
     {
-        public void AddPicturebox(GroupBox gbdapan,int numQuest,int space, List<PictureBox> picture)
+        public GroupBox gbdapan { get; set; }
+        public string lbstatus { get; set; }
+        public string lbthongbao { get; set; }
+        public ArrayList selected { get; set; }
+        public int answerLength { get; set; }
+        public int soMang { get; set; }
+        public int diem { get; set; }
+        public int countselecttrue { get; set; }
+        public List<PictureBox> picture { get; set; }
+        public Functionplaygame()
         {
-            
+            picture = new List<PictureBox>();
+            selected = new ArrayList();
+        }
+        public List<PictureBox> AddPicturebox(int numQuest, ref int space)
+        {
+
             gbdapan.Controls.Clear();
             char[] wordChars = Connectsql.arrAnswer1[numQuest].ToString().ToCharArray(); //chuyển đáp án thành từng kí tự
 
@@ -54,7 +68,45 @@ namespace Chiecnonkidieu
                 pic.BringToFront(); //mang pic ra trước groupbox, bảo đảm được nhìn thấy
                 picture.Add(pic);
             }
+            return picture;
         }
+        
+        public int CheckCharClicked(char charClicked, int numquestion) //Kiểm tra ký tự nhập đúng của người dùng
+        {
+            answerLength = 0; 
+            bool flagmess = true; //kiểm soát chỉ cho hiện 1 lần  MessageBox.Show("Bạn đã trả lời đúng!"); Hàm selectQuestion
+            Connectsql.arrAnswer1[numquestion] = Connectsql.arrAnswer1[numquestion].ToString().ToUpper();
+            if (Connectsql.arrAnswer1[numquestion].ToString().Contains(charClicked))
+            {
+                char[] wordchar = Connectsql.arrAnswer1[numquestion].ToString().ToCharArray(); // chuyển chuỗi kết quả thành mảng kí tự
 
+                for (int i = 0; i < wordchar.Length; i++)
+                {
+                    if (charClicked == wordchar[i])
+                    {
+                        selected.Add(wordchar[i]);
+                        answerLength++;
+                        if (flagmess == true)
+                        {
+                            for (int j = 0; j < wordchar.Length; j++) //khi người dùng chọn 1 chữ cái thì hàm sẽ kiểm tra xem                              
+                            {                                         //chữ đó có bao nhiêu chữ trong kết quả
+                                if (charClicked == wordchar[j])
+                                    countselecttrue++;
+                            }
+                            lbthongbao = "Bạn đã trả lời đúng, có " + countselecttrue + " chữ " + charClicked;
+                            flagmess = false;
+                        }
+                        picture[i].Text = charClicked.ToString();
+                        picture[i].Image = Image.FromFile(Application.StartupPath + @"\Picture\" + charClicked.ToString() + ".png");
+                    }
+                }
+                return 1;
+
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
 }

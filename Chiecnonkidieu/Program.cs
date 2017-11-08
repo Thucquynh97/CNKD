@@ -16,7 +16,7 @@ namespace Chiecnonkidieu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPlaygame());
+            Application.Run(new Formmain());
         }
     }
 }

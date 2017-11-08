@@ -1,6 +1,5 @@
-E:\KTPM\CNKD\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe.config
 E:\KTPM\CNKD\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe
-E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csprojResolveAssemblyReference.cache
+E:\KTPM\CNKD\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.exe.config
 E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.FormChienthang.resources
 E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formdangnhap.resources
 E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Formhuongdan.resources
@@ -15,4 +14,5 @@ E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.Properties.Resources.resour
 E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csproj.GenerateResource.Cache
 E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.exe
 E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.pdb
+E:\KTPM\CNKD\Chiecnonkidieu\obj\Debug\Chiecnonkidieu.csprojResolveAssemblyReference.cache
 E:\KTPM\CNKD\Chiecnonkidieu\bin\Debug\Chiecnonkidieu.pdb
