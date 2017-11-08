@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chuanhoachuoi.cs" />
+    <Compile Include="Functionplaygame.cs" />
     <Compile Include="Question.cs" />
     <Compile Include="Connectsql.cs" />
     <Compile Include="FormChienthang.cs">
@@ -109,7 +111,6 @@
     <Compile Include="FormYnghiacautraloi.Designer.cs">
       <DependentUpon>FormYnghiacautraloi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Import.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormChienthang.resx">

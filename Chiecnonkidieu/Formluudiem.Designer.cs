@@ -81,6 +81,7 @@
             this.Name = "Formluudiem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lưu Điểm";
+            this.Load += new System.EventHandler(this.Formluudiem_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

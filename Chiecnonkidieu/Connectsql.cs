@@ -10,11 +10,16 @@ using System.Data;
 
 namespace Chiecnonkidieu
 {
-    class Connectsql
+    public class Connectsql
     {
+        public static ArrayList arrQuestion { get; set; }
+        public static ArrayList arrAnswer1 { get; set; }
+        public static ArrayList arrAnswer2 { get; set; }
+        private Random rand;
         public SqlConnection mysql { get; set; }
-        public Connectsql(string cnstr)
+        public Connectsql()
         {
+            string cnstr = ConfigurationManager.ConnectionStrings["cnstr"].ConnectionString;
             mysql = new SqlConnection(cnstr);
         }
         public void Connect()
@@ -42,6 +47,84 @@ namespace Chiecnonkidieu
             {
                 mysql.Close();
             }
+        }
+        public int Delete(int id)
+        {
+            Connect();
+            SqlCommand cmd = new SqlCommand("uspDelete", mysql);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("id", id));
+            return cmd.ExecuteNonQuery();
+            Disconnect();
+        }
+        public void AddQuestion(string cauhoi,string cautraloi,string giaithich)
+        {
+
+            Connect();
+            SqlCommand cmd = new SqlCommand("uspThem", mysql);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("cauhoi", cauhoi));
+            cmd.Parameters.Add(new SqlParameter("cautraloi", cautraloi));
+            cmd.Parameters.Add(new SqlParameter("giaithich", giaithich));
+            cmd.ExecuteNonQuery();
+            Disconnect();
+        }
+        public List<object> ExecuteReader(string sql)
+        {
+            Connect();
+            SqlCommand cmd = new SqlCommand(sql, mysql);
+            SqlDataReader dr = cmd.ExecuteReader();
+            List<object> list = new List<object>();
+            while (dr.Read())
+            {
+                var prop = new
+                {
+                    id = dr["ID"],
+                    cauhoi = dr["Question"],
+                    cautraloi = dr["answer1"],
+                    giaithich = dr["answer2"]
+                };
+                list.Add(prop);
+            }
+            Disconnect();
+            return list;
+
+        }
+        public void ImportQA(SqlConnection cn, string str)
+        {
+            rand = new Random();
+
+            arrQuestion = new ArrayList();
+            arrAnswer1 = new ArrayList();
+            arrAnswer2 = new ArrayList();
+            SqlDataAdapter da = new SqlDataAdapter(str, cn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            for (int j = 0; j < dt.Rows.Count; j++)
+            {
+                int r = rand.Next(0, dt.Rows.Count);
+
+                arrQuestion.Add(dt.Rows[r][1]);
+                arrAnswer1.Add(dt.Rows[r][2]);
+                arrAnswer2.Add(dt.Rows[r][3]);
+            }
+;
+        }
+        public void ImportPoint(string name, int point)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("ImportPoint", mysql);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@name", name));
+                cmd.Parameters.Add(new SqlParameter("@point", point));
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+
         }
 
     }

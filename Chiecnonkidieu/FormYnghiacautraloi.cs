@@ -13,6 +13,7 @@ namespace Chiecnonkidieu
     public partial class FormYnghiacautraloi : Form
     {
         private int numAnswer; //đọc câu trả lời
+        private Connectsql cn = null;
         public FormYnghiacautraloi()
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace Chiecnonkidieu
 
         private void FormYnghiacautraloi_Load(object sender, EventArgs e)
         {
-            txttext.Text = Import.arrAnswer2[numAnswer].ToString();
+            txttext.Text = Connectsql.arrAnswer2[numAnswer].ToString();
         }
     }
 }

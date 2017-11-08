@@ -20,13 +20,13 @@ namespace Chiecnonkidieu
 
         private void FormXemdiem_Load(object sender, EventArgs e)
         {
-            string cnstr = ConfigurationManager.ConnectionStrings["cnstr"].ConnectionString;
-            Connectsql cn = new Connectsql(cnstr);
+            Connectsql cn = new Connectsql();
             cn.Connect();
             SqlDataAdapter da = new SqlDataAdapter("SELECT TOP 10 * FROM Charts ORDER BY point DESC", cn.mysql);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dgv.DataSource = dt;
+            cn.Disconnect();
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -77,7 +77,7 @@ namespace Chiecnonkidieu
 
         private void Formmayman_Load(object sender, EventArgs e)
         {
-            count = Import.arrAnswer1[countNumOfQuestion].ToString().Length;
+            count = Connectsql.arrAnswer1[countNumOfQuestion].ToString().Length;
         }
     }
 }
