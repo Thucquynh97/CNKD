@@ -18,22 +18,402 @@ namespace Chiecnonkidieu
     public class Functionplaygame
     {
         public GroupBox gbdapan { get; set; }
-        public string lbstatus { get; set; }
-        public string lbthongbao { get; set; }
-        public ArrayList selected { get; set; }
-        public int answerLength { get; set; }
+        public string lbchoi { get; set; } //Biến lưu câu hỏi lấy từ csdl
         public int soMang { get; set; }
         public int diem { get; set; }
-        public int countselecttrue { get; set; }
-        public List<PictureBox> picture { get; set; }
+        public ArrayList selected { get; set; } // mảng chứa kí tự đúng của ng dùng
+        public int numQuest { get; set; }
+        private int answerLength; //kiểm tra người dùng trả lời xong câu hỏi chưa
+        private int countselecttrue; //Đêm câu trả lời đúng của ng dùng => người dùng đã trả lời xog câu hỏi chưa
+        private List<PictureBox> picture; //Lưu từng ký tự của câu trả lời
+        private int space; //Tính số khoảng trắng 
+        private bool flag; //Biến cờ kiểm soát thao tác người dùng VD:Quay nón xong phải chọn chữ và ngược lại
+        private int IQ = 0; //Biến đếm I câu hỏi
+        private Connectsql cn = null;
         public Functionplaygame()
         {
+            cn = new Connectsql();
             picture = new List<PictureBox>();
             selected = new ArrayList();
         }
-        public List<PictureBox> AddPicturebox(int numQuest, ref int space)
+
+        public bool CheckCharClicked(char charClicked) //Kiểm tra ký tự nhập đúng của người dùng
+        {
+            Connectsql.arrAnswer1[numQuest] = Connectsql.arrAnswer1[numQuest].ToString().ToUpper();
+
+            //Người chơi chọn đúng kí tự trong câu trả lời
+            if (Connectsql.arrAnswer1[numQuest].ToString().Contains(charClicked))
+            {
+                return true;
+            }
+            else
+            {
+
+                if (soMang > 1)
+                    soMang--;
+                else
+                {
+                    soMang--;
+                }
+                return false;
+            }
+        }
+        public void StartGame()
+        {
+            cn.Connect();
+            if (cn.ImportQA(cn.mysql, "SELECT *FROM Question") != -1)
+            {
+                soMang = 2;
+                AddPic();
+            }
+            else
+                MessageBox.Show("Kết nối bị lỗi", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+        public bool SelectQuestion(char charClicked, int ketqua)
         {
 
+            char[] wordchar = Connectsql.arrAnswer1[numQuest].ToString().ToCharArray(); // chuyển chuỗi kết quả thành mảng kí tự
+
+            for (int i = 0; i < wordchar.Length; i++)
+            {
+                if (charClicked == wordchar[i])
+                {
+                    selected.Add(wordchar[i]);
+                    answerLength++;
+                    picture[i].Text = charClicked.ToString();
+                    picture[i].Image = Image.FromFile(Application.StartupPath + @"\Picture\" + charClicked.ToString() + ".png");
+
+                }
+            }
+            for (int i = 0; i < wordchar.Length; i++) //khi người dùng chọn 1 chữ cái thì hàm sẽ kiểm tra xem                              
+            {                                         //chữ đó có bao nhiêu chữ trong kết quả
+
+                if (charClicked == wordchar[i])
+                    countselecttrue++;
+            }
+
+            DialogResult dlg = MessageBox.Show("Có " + countselecttrue + " chữ " + charClicked, "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            for (int i = 0; i < countselecttrue; i++)
+                diem += Addpoint(ketqua);
+            countselecttrue = 0;
+            if (dlg == DialogResult.OK)
+            {
+                if (answerLength == Connectsql.arrAnswer1[numQuest].ToString().Length - space)
+                {
+                    NextQuestion();
+                    return true;
+                }
+            }
+            return false;
+
+
+
+        }
+        public int Addpoint(int x)
+        {
+            int diem = 0;
+            switch (x)
+            {
+                case 0:
+                    {
+
+                        break;
+                    }
+                case 15:
+                    {
+                        diem += 200;
+                        break;
+                    }
+                case 30:
+                    {
+                        diem += 700;
+                        break;
+                    }
+                case 45:
+                    {
+                        diem += 1000;
+                        break;
+                    }
+                case 60:
+                    {
+                        diem += 400;
+                        break;
+                    }
+                case 75:
+                    {
+                        break;
+                    }
+                case 90:
+                    {
+                        diem += 900;
+                        break;
+                    }
+                case 105:
+                    {
+
+                        break;
+                    }
+                case 120:
+                    {
+                        diem += 300;
+                        break;
+                    }
+                case 135:
+                    {
+                        diem += 800;
+                        break;
+                    }
+                case 150:
+                    {
+
+                        break;
+                    }
+                case 165:
+                    {
+                        diem += 1000;
+                        break;
+                    }
+                case 180:
+                    {
+                        diem += 400;
+                        break;
+                    }
+                case 195:
+                    {
+                        diem += 600;
+                        break;
+                    }
+                case 210:
+                    {
+                        diem += 300;
+                        break;
+                    }
+                case 225:
+                    {
+                        break;
+                    }
+                case 240:
+                    {
+                        diem += 200;
+                        break;
+                    }
+                case 255:
+                    {
+                        diem += 900;
+                        break;
+                    }
+                case 270:
+                    {
+                        diem += 700;
+                        break;
+                    }
+                case 285:
+                    {
+                        break;
+                    }
+                case 300:
+                    {
+                        diem += 300;
+                        break;
+                    }
+                case 315:
+                    {
+                        diem += 2000;
+                        break;
+                    }
+                case 330:
+                    {
+                        diem += 100;
+                        break;
+                    }
+                case 345:
+                    {
+                        diem += 500;
+                        break;
+                    }
+                case 360:
+                    {
+
+                        break;
+                    }
+            }
+            return diem;
+        }
+        public string Showpoint(int x)
+        {
+            string lbthongbao = "";
+            switch (x)
+            {
+                case 0:
+                    {
+                        diem = diem * 2;
+                        MessageBox.Show("Bạn đã quay vào ô Nhân đôi điểm", "Chúc Mừng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;
+                    }
+                case 15:
+                    {
+                        lbthongbao = "Bạn đã quay vào ô 200 điểm";
+                        break;
+                    }
+                case 30:
+                    {
+                        lbthongbao = "Bạn đã quay vào ô 700 điểm";
+                        break;
+                    }
+                case 45:
+                    {
+                        lbthongbao = "Bạn đã quay vào ô 1000 điểm";
+                        break;
+                    }
+                case 60:
+                    {
+                        lbthongbao = "Bạn đã quay vào ô 400 điểm";
+                        break;
+                    }
+                case 75:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô Mất Mạng", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        soMang--;
+                        break;
+                    }
+                case 90:
+                    {
+                        lbthongbao = "Bạn đã quay vào ô 900 điểm";
+                        break;
+                    }
+                case 105:
+                    {
+                        //MessageBox.Show("Bạn đã quay vào ô May mắn\n" +
+                        //"Bạn được chọn 1 ký tự", "Chúc Mừng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //Formmayman frm = new Formmayman(numQuest);
+                        //frm.ShowDialog();
+                        //if (select != -1)
+                        //{
+                        //    string strPattern = @"[\s]+";
+                        //    Regex rgx = new Regex(strPattern);
+                        //    string output = rgx.Replace(Connectsql.arrAnswer1[numQuest].ToString().ToUpper(), "");//loại bỏ khoảng trắng (space)
+                        //    char[] wordchar = output.ToCharArray();//chuyển mảng thành kí tự sau khi đã loại bỏ các ký tự space
+                        //    char select2;
+                        //    for (int i = 0; i < selected.Count; i++)
+                        //    {
+                        //        select2 = Convert.ToChar(selected[i]);
+                        //        if (select2 == wordchar[select])
+                        //        {
+                        //            MessageBox.Show("Từ Đã lật", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //            return;
+                        //        }
+                        //    }
+                        //    SelectQuestion(numQuest, wordchar[select]);
+                        //    if (answerLength == Connectsql.arrAnswer1[numQuest].ToString().Length - space)
+                        //    {
+                        //        Func.NextQuestion();
+                        //        flag = false;
+                        //    }
+
+
+
+                        //}
+                        //else
+                        //{
+                        //    MessageBox.Show("Hêt thời gian", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //}
+                    }
+                    break;
+                case 120:
+                    {
+                        lbthongbao = "Bạn đã quay vào ô 300 điểm";
+                        break;
+                    }
+                case 135:
+                    {
+                        lbthongbao = "Bạn đã quay vào ô 800 điểm";
+                        break;
+                    }
+                case 150:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô Mất Điểm", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        diem = 0;
+                        break;
+                    }
+                case 165:
+                    {
+                        lbthongbao = "Bạn đã quay vào ô 1000 điểm";
+                        break;
+                    }
+                case 180:
+                    {
+                        lbthongbao = "Bạn đã quay vào ô 400 điểm";
+                        break;
+                    }
+                case 195:
+                    {
+                        lbthongbao = "Bạn đã quay vào ô 600 điểm";
+                        break;
+                    }
+                case 210:
+                    {
+                        lbthongbao = "Bạn đã quay vào ô 300 điểm";
+                        break;
+                    }
+                case 225:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô Thêm Mạng", "Chúc Mừng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        soMang++;
+                        break;
+                    }
+                case 240:
+                    {
+                        lbthongbao = "Bạn đã quay vào ô 200 điểm";
+                        break;
+                    }
+                case 255:
+                    {
+                        lbthongbao = "Bạn đã quay vào ô 900 điểm";
+                        break;
+                    }
+                case 270:
+                    {
+                        lbthongbao = "Bạn đã quay vào ô 700 điểm";
+                        break;
+                    }
+                case 285:
+                    {
+                        MessageBox.Show("Bạn đã quay vào ô Chia đôi điểm", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        diem = diem / 2;
+                        break;
+                    }
+                case 300:
+                    {
+                        lbthongbao = "Bạn đã quay vào ô 300 điểm";
+                        break;
+                    }
+                case 315:
+                    {
+                        lbthongbao = "Bạn đã quay vào ô 2000 điểm";
+                        break;
+                    }
+                case 330:
+                    {
+                        lbthongbao = "Bạn đã quay vào ô 100 điểm";
+                        break;
+                    }
+                case 345:
+                    {
+                        lbthongbao = "Bạn đã quay vào ô 500 điểm";
+                        break;
+                    }
+                case 360:
+                    {
+                        diem = diem * 2;
+                        MessageBox.Show("Bạn đã quay vào ô nhân đôi điểm", "Chúc Mừng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;
+                    }
+            }
+            return lbthongbao;
+        }
+        public List<PictureBox> AddPicturebox(int numQuest)
+        {
+            space = 0;
             gbdapan.Controls.Clear();
             char[] wordChars = Connectsql.arrAnswer1[numQuest].ToString().ToCharArray(); //chuyển đáp án thành từng kí tự
 
@@ -70,43 +450,28 @@ namespace Chiecnonkidieu
             }
             return picture;
         }
-        
-        public int CheckCharClicked(char charClicked, int numquestion) //Kiểm tra ký tự nhập đúng của người dùng
+        public void AddPic()
         {
-            answerLength = 0; 
-            bool flagmess = true; //kiểm soát chỉ cho hiện 1 lần  MessageBox.Show("Bạn đã trả lời đúng!"); Hàm selectQuestion
-            Connectsql.arrAnswer1[numquestion] = Connectsql.arrAnswer1[numquestion].ToString().ToUpper();
-            if (Connectsql.arrAnswer1[numquestion].ToString().Contains(charClicked))
-            {
-                char[] wordchar = Connectsql.arrAnswer1[numquestion].ToString().ToCharArray(); // chuyển chuỗi kết quả thành mảng kí tự
+            RandQuestion();
+            IQ++;
+            lbchoi = "Câu " + IQ + " :" + Connectsql.arrQuestion[numQuest].ToString();
+            picture = AddPicturebox(numQuest);
+        }
+        public void RandQuestion()
+        {
+            Random rand = new Random();
+            numQuest = rand.Next(0, Connectsql.arrQuestion.Count);
+        }
+        public void NextQuestion() //chuyển sang câu hỏi mới
+        {
+            diem += 500;
+            soMang++;
+            picture.Clear();
+            selected.Clear();
+            space = 0;
+            answerLength = 0; //reset lại biến space và answerLength
+            AddPic();
 
-                for (int i = 0; i < wordchar.Length; i++)
-                {
-                    if (charClicked == wordchar[i])
-                    {
-                        selected.Add(wordchar[i]);
-                        answerLength++;
-                        if (flagmess == true)
-                        {
-                            for (int j = 0; j < wordchar.Length; j++) //khi người dùng chọn 1 chữ cái thì hàm sẽ kiểm tra xem                              
-                            {                                         //chữ đó có bao nhiêu chữ trong kết quả
-                                if (charClicked == wordchar[j])
-                                    countselecttrue++;
-                            }
-                            lbthongbao = "Bạn đã trả lời đúng, có " + countselecttrue + " chữ " + charClicked;
-                            flagmess = false;
-                        }
-                        picture[i].Text = charClicked.ToString();
-                        picture[i].Image = Image.FromFile(Application.StartupPath + @"\Picture\" + charClicked.ToString() + ".png");
-                    }
-                }
-                return 1;
-
-            }
-            else
-            {
-                return 0;
-            }
         }
     }
 }

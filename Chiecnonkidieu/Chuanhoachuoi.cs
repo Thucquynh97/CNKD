@@ -8,8 +8,9 @@ namespace Chiecnonkidieu
 {
     class Chuanhoachuoi
     {
-        public void btchuanhoa(string name)
+        public string btchuanhoa(string x)
         {
+            string name = x;
             char[] arrchar = { ' ', '\n', '\t' };
             String[] arr = name.Split(arrchar, StringSplitOptions.RemoveEmptyEntries);
             name = "";
@@ -17,9 +18,9 @@ namespace Chiecnonkidieu
             {
                 String a = arr[i].ToLower();
                 name += a.Substring(0, 1).ToUpper() + a.Substring(1) + " ";
-                name.TrimEnd();
             }
 
+            return name.TrimEnd();
         }
     }
 }

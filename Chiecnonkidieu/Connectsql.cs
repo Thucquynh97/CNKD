@@ -28,11 +28,8 @@ namespace Chiecnonkidieu
                 if (mysql != null && mysql.State == ConnectionState.Closed)
                 {
                     mysql.Open();
+
                 }
-            }
-            catch (InvalidOperationException ex)
-            {
-                throw ex;
             }
             catch (SqlException ex)
             {
@@ -45,68 +42,100 @@ namespace Chiecnonkidieu
             if (mysql.State == ConnectionState.Open)
             {
                 mysql.Close();
+
             }
         }
         public int Delete(int id)
         {
+            if (id == -1)
+                return -1;
             Connect();
             SqlCommand cmd = new SqlCommand("uspDelete", mysql);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new SqlParameter("id", id));
-            return cmd.ExecuteNonQuery();
+            int numOfdelete = cmd.ExecuteNonQuery();
+            return numOfdelete;
             Disconnect();
         }
-        public void AddQuestion(string cauhoi,string cautraloi,string giaithich)
+        public int AddQuestion(string cauhoi, string cautraloi, string giaithich)
         {
-
+            if (cauhoi == "" || cautraloi == "" || giaithich == "")
+                return -1;
             Connect();
             SqlCommand cmd = new SqlCommand("uspThem", mysql);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new SqlParameter("cauhoi", cauhoi));
             cmd.Parameters.Add(new SqlParameter("cautraloi", cautraloi));
             cmd.Parameters.Add(new SqlParameter("giaithich", giaithich));
-            cmd.ExecuteNonQuery();
+            int numOfAdd = cmd.ExecuteNonQuery();
+            return numOfAdd;
             Disconnect();
         }
         public List<object> ExecuteReader(string sql)
         {
-            Connect();
-            SqlCommand cmd = new SqlCommand(sql, mysql);
-            SqlDataReader dr = cmd.ExecuteReader();
-            List<object> list = new List<object>();
-            while (dr.Read())
+            SqlDataReader dr;
+            List<object> list;
+            if (sql == "")
             {
-                var prop = new
-                {
-                    id = dr["ID"],
-                    cauhoi = dr["Question"],
-                    cautraloi = dr["answer1"],
-                    giaithich = dr["answer2"]
-                };
-                list.Add(prop);
+                list = null;
             }
-            Disconnect();
+            else
+            {
+                Connect();
+                SqlCommand cmd = new SqlCommand(sql, mysql);
+                try
+                {
+                    dr = cmd.ExecuteReader();
+                }
+                catch (SqlException ex)
+                {
+                    throw ex;
+                }
+                list = new List<object>();
+                while (dr.Read())
+                {
+                    var prop = new
+                    {
+                        id = dr["ID"],
+                        cauhoi = dr["Question"],
+                        cautraloi = dr["answer1"],
+                        giaithich = dr["answer2"]
+                    };
+                    list.Add(prop);
+                }
+                Disconnect();
+
+            }
             return list;
 
         }
-        public void ImportQA(SqlConnection cn, string str)
+        public int ImportQA(SqlConnection cn, string str)
         {
-
+            if (cn == null || str == "")
+                return -1;
             arrQuestion = new ArrayList();
             arrAnswer1 = new ArrayList();
             arrAnswer2 = new ArrayList();
             SqlDataAdapter da = new SqlDataAdapter(str, cn);
             DataTable dt = new DataTable();
-            da.Fill(dt);
+            try
+            {
+                da.Fill(dt);
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
             for (int j = 0; j < dt.Rows.Count; j++)
             {
                 arrQuestion.Add(dt.Rows[j][1]);
                 arrAnswer1.Add(dt.Rows[j][2]);
                 arrAnswer2.Add(dt.Rows[j][3]);
             }
-;
+            return 1;
         }
-        public void ImportPoint(string name, int point)
+        public int ImportPoint(string name, int point)
         {
             try
             {
@@ -114,12 +143,15 @@ namespace Chiecnonkidieu
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@name", name));
                 cmd.Parameters.Add(new SqlParameter("@point", point));
-                cmd.ExecuteNonQuery();
+                int countOfIP = cmd.ExecuteNonQuery();
+                return countOfIP;
+
             }
             catch (SqlException ex)
             {
                 throw ex;
             }
+            return -1;
 
         }
 
