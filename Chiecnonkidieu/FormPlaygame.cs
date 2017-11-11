@@ -26,7 +26,6 @@ namespace Chiecnonkidieu
         private float width;
         private float height;
         private Random rand; //Biến lưu kết quả ngẫu nhiên
-        public static int select { get; set; }//lựa chọn ô may mắn của người dùng
         private Connectsql cn = null;
         private Functionplaygame Func = null;
         public FormPlaygame()
@@ -46,12 +45,11 @@ namespace Chiecnonkidieu
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Button b = (Button)sender;
+            char charClicked = b.Text.ToCharArray()[0];
             if (flag == true)
             {
 
-                Button b = (Button)sender;
-                char charClicked = b.Text.ToCharArray()[0];
                 //Kiểm tra câu trả lời của người dùng
                 if (Func.CheckCharClicked(charClicked))
                 {
@@ -80,10 +78,17 @@ namespace Chiecnonkidieu
                 else
                 {
                     if (Func.soMang >= 0)
+                    {
                         lbthongbao.Text = "Bạn đã trả lời sai";
-
+                        txtMang.Text = Func.soMang.ToString();
+                    }
                     else
+                    {
                         MessageBox.Show("Ban da thua\nDiem cua ban: " + Func.diem.ToString());
+                        Func.Endgame();
+                        this.Hide();
+                    }
+                    
                 }
                 flag = false;
             }
@@ -91,7 +96,7 @@ namespace Chiecnonkidieu
             {
                 MessageBox.Show("Bạn chưa quay chiếc nón kỳ diệu", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            EnableFalse(b.Text);
 
         }
         private void btchoi_Click(object sender, EventArgs e)
@@ -140,7 +145,40 @@ namespace Chiecnonkidieu
             btw.Enabled = true;
             btz.Enabled = true;
         }
-
+        private void EnableFalse(string text)//khóa 1 nút button chỉ định
+        {
+            if (text != null)
+            {
+                switch (text)
+                {
+                    case "A": bta.Enabled = false; break;
+                    case "B": btb.Enabled = false; break;
+                    case "C": btc.Enabled = false; break;
+                    case "D": btd.Enabled = false; break;
+                    case "E": bte.Enabled = false; break;
+                    case "F": btf.Enabled = false; break;
+                    case "G": btg.Enabled = false; break;
+                    case "H": bth.Enabled = false; break;
+                    case "I": bti.Enabled = false; break;
+                    case "J": btj.Enabled = false; break;
+                    case "K": btk.Enabled = false; break;
+                    case "L": btl.Enabled = false; break;
+                    case "M": btm.Enabled = false; break;
+                    case "N": btn.Enabled = false; break;
+                    case "O": bto.Enabled = false; break;
+                    case "P": btp.Enabled = false; break;
+                    case "Q": btq.Enabled = false; break;
+                    case "R": btr.Enabled = false; break;
+                    case "S": bts.Enabled = false; break;
+                    case "U": btu.Enabled = false; break;
+                    case "V": btv.Enabled = false; break;
+                    case "X": btx.Enabled = false; break;
+                    case "Y": bty.Enabled = false; break;
+                    case "W": btw.Enabled = false; break;
+                    case "Z": btz.Enabled = false; break;
+                } 
+            }
+        }
         //Việc quay nón
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
@@ -161,7 +199,7 @@ namespace Chiecnonkidieu
                 timer1.Start();
                 timer2.Start();
                 btthoat.Enabled = false;
-                flag = true;
+                //flag = true;
 
             }
             else
@@ -185,12 +223,20 @@ namespace Chiecnonkidieu
 
             this.Text = angle.ToString(); ;
             pictureBox1.Invalidate(); // vẽ lại trên picturebox
+          
             if (ketqua == angle && timer2.Enabled == false)
             {
                 timer1.Stop();
                 lbthongbao.Text = Func.Showpoint(ketqua);
                 txtdiem.Text = Func.diem.ToString();
                 txtMang.Text = Func.soMang.ToString();
+                if (ketqua == 105)
+                {
+                      EnableFalse(Func.OMayMan(ketqua));             
+                }
+              
+                
+            
                 flag = true;
             }
         }

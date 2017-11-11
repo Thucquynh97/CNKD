@@ -23,6 +23,7 @@ namespace Chiecnonkidieu
         public int diem { get; set; } //Biến lưu trứ điểm của người dùng
         public ArrayList selected { get; set; } // mảng chứa kí tự đúng của ng dùng
         public int numQuest { get; set; }
+        public static int select { get; set; }//lựa chọn ô may mắn của người dùng
         private int answerLength; //kiểm tra người dùng trả lời xong câu hỏi chưa
         private int countselecttrue; //Đêm câu trả lời đúng của ng dùng => người dùng đã trả lời xog câu hỏi chưa
         private List<PictureBox> picture; //Lưu từng ký tự của câu trả lời
@@ -79,7 +80,7 @@ namespace Chiecnonkidieu
         //Kiểm tra và in kết quả
         public bool SelectQuestion(char charClicked, int ketqua)
         {
-
+            Connectsql.arrAnswer1[numQuest] = Connectsql.arrAnswer1[numQuest].ToString().ToUpper(); //Chuyển ký tự thành Chữ IN HOA
             char[] wordchar = Connectsql.arrAnswer1[numQuest].ToString().ToCharArray(); // chuyển chuỗi kết quả thành mảng kí tự
             for (int i = 0; i < wordchar.Length; i++)
             {
@@ -291,42 +292,9 @@ namespace Chiecnonkidieu
                     }
                 case 105:
                     {
-                        //MessageBox.Show("Bạn đã quay vào ô May mắn\n" +
-                        //"Bạn được chọn 1 ký tự", "Chúc Mừng", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //Formmayman frm = new Formmayman(numQuest);
-                        //frm.ShowDialog();
-                        //if (select != -1)
-                        //{
-                        //    string strPattern = @"[\s]+";
-                        //    Regex rgx = new Regex(strPattern);
-                        //    string output = rgx.Replace(Connectsql.arrAnswer1[numQuest].ToString().ToUpper(), "");//loại bỏ khoảng trắng (space)
-                        //    char[] wordchar = output.ToCharArray();//chuyển mảng thành kí tự sau khi đã loại bỏ các ký tự space
-                        //    char select2;
-                        //    for (int i = 0; i < selected.Count; i++)
-                        //    {
-                        //        select2 = Convert.ToChar(selected[i]);
-                        //        if (select2 == wordchar[select])
-                        //        {
-                        //            MessageBox.Show("Từ Đã lật", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        //            return;
-                        //        }
-                        //    }
-                        //    SelectQuestion(numQuest, wordchar[select]);
-                        //    if (answerLength == Connectsql.arrAnswer1[numQuest].ToString().Length - space)
-                        //    {
-                        //        Func.NextQuestion();
-                        //        flag = false;
-                        //    }
-
-
-
-                        //}
-                        //else
-                        //{
-                        //    MessageBox.Show("Hêt thời gian", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        //}
+                        break;
                     }
-                    break;
+                    
                 case 120:
                     {
                         lbthongbao = "Bạn đã quay vào ô 300 điểm";
@@ -418,6 +386,45 @@ namespace Chiecnonkidieu
                     }
             }
             return lbthongbao;
+        }
+        public string OMayMan(int ketqua)
+        {
+            string button = "";
+            MessageBox.Show("Bạn đã quay vào ô May mắn\n" +
+                       "Bạn được chọn 1 ký tự", "Chúc Mừng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Formmayman frm = new Formmayman(numQuest);
+            frm.ShowDialog();
+            if (select != -1)
+            {
+                string strPattern = @"[\s]+";
+                Regex rgx = new Regex(strPattern);
+                string output = rgx.Replace(Connectsql.arrAnswer1[numQuest].ToString().ToUpper(), "");//loại bỏ khoảng trắng (space)
+                char[] wordchar = output.ToCharArray();//chuyển mảng thành kí tự sau khi đã loại bỏ các ký tự space
+                button = wordchar[select].ToString();
+                char select2;
+                for (int i = 0; i < selected.Count; i++)
+                {
+                    select2 = Convert.ToChar(selected[i]);
+                    if (select2 == wordchar[select])
+                    {
+                        MessageBox.Show("Từ Đã lật", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return null;
+                    }
+                }
+                SelectQuestion(wordchar[select], ketqua);
+                if (answerLength == Connectsql.arrAnswer1[numQuest].ToString().Length - space)
+                {
+                    NextQuestion();
+                    flag = false;
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Hêt thời gian", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            return button;
+            
         }
         public List<PictureBox> AddPicturebox(int numQuest)
         {

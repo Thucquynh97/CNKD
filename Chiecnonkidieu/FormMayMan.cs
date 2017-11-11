@@ -33,12 +33,12 @@ namespace Chiecnonkidieu
                 progressBar1.Value = 0;
                 if (txtmayman.Text == "")
                 {
-                    FormPlaygame.select = -1;
+                    Functionplaygame.select = -1;
                     this.Close();
                 }
                 else
                 {
-                    FormPlaygame.select = int.Parse(txtmayman.Text) - 1;
+                    Functionplaygame.select = int.Parse(txtmayman.Text) - 1;
                     this.Close();
                 }
 
@@ -63,8 +63,8 @@ namespace Chiecnonkidieu
         
             else if (txtmayman.Text != "" && int.Parse(txtmayman.Text) <= count)
             {
-  
-                FormPlaygame.select = int.Parse(txtmayman.Text) - 1;
+
+                Functionplaygame.select = int.Parse(txtmayman.Text) - 1;
                 this.Close();
             }
             else
