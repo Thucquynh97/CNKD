@@ -19,8 +19,8 @@ namespace Chiecnonkidieu
     {
         public GroupBox gbdapan { get; set; }
         public string lbchoi { get; set; } //Biến lưu câu hỏi lấy từ csdl
-        public int soMang { get; set; }
-        public int diem { get; set; }
+        public int soMang { get; set; } //Biến lưu trữ số mạng của người dùng
+        public int diem { get; set; } //Biến lưu trứ điểm của người dùng
         public ArrayList selected { get; set; } // mảng chứa kí tự đúng của ng dùng
         public int numQuest { get; set; }
         private int answerLength; //kiểm tra người dùng trả lời xong câu hỏi chưa
@@ -39,8 +39,7 @@ namespace Chiecnonkidieu
 
         public bool CheckCharClicked(char charClicked) //Kiểm tra ký tự nhập đúng của người dùng
         {
-            Connectsql.arrAnswer1[numQuest] = Connectsql.arrAnswer1[numQuest].ToString().ToUpper();
-
+            Connectsql.arrAnswer1[numQuest] = Connectsql.arrAnswer1[numQuest].ToString().ToUpper(); //Chuyển ký tự thành Chữ IN HOA
             //Người chơi chọn đúng kí tự trong câu trả lời
             if (Connectsql.arrAnswer1[numQuest].ToString().Contains(charClicked))
             {
@@ -69,16 +68,24 @@ namespace Chiecnonkidieu
             else
                 MessageBox.Show("Kết nối bị lỗi", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
+        //xoay chiếc nón
+        public void pictureBox_Paint(Graphics g,  PictureBox pic, int angle, Image img)
+        {
+            g.TranslateTransform(pic.Width / 2, pic.Height / 2);
+            g.RotateTransform(angle);
+            g.TranslateTransform(-pic.Width / 2, -pic.Height / 2);
+            g.DrawImage(img, 0, 0);
+        }
+        //Kiểm tra và in kết quả
         public bool SelectQuestion(char charClicked, int ketqua)
         {
 
             char[] wordchar = Connectsql.arrAnswer1[numQuest].ToString().ToCharArray(); // chuyển chuỗi kết quả thành mảng kí tự
-
             for (int i = 0; i < wordchar.Length; i++)
             {
                 if (charClicked == wordchar[i])
                 {
-                    selected.Add(wordchar[i]);
+                    selected.Add(wordchar[i]); //Thêm kí tự đúng của người dùng vào mảng
                     answerLength++;
                     picture[i].Text = charClicked.ToString();
                     picture[i].Image = Image.FromFile(Application.StartupPath + @"\Picture\" + charClicked.ToString() + ".png");
@@ -98,6 +105,7 @@ namespace Chiecnonkidieu
             countselecttrue = 0;
             if (dlg == DialogResult.OK)
             {
+                //Nếu người dùng trả lời xog câu hỏi sẽ chuyển sang câu hỏi kế tiếp
                 if (answerLength == Connectsql.arrAnswer1[numQuest].ToString().Length - space)
                 {
                     NextQuestion();
@@ -416,7 +424,6 @@ namespace Chiecnonkidieu
             space = 0;
             gbdapan.Controls.Clear();
             char[] wordChars = Connectsql.arrAnswer1[numQuest].ToString().ToCharArray(); //chuyển đáp án thành từng kí tự
-
             //đếm các khoảng trắng giữa các từ
             foreach (char c in wordChars)
             {
@@ -471,6 +478,12 @@ namespace Chiecnonkidieu
             space = 0;
             answerLength = 0; //reset lại biến space và answerLength
             AddPic();
+
+        }
+        public void Endgame()
+        {
+            Formluudiem frm = new Formluudiem(diem);
+            frm.ShowDialog();
 
         }
     }

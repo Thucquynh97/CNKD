@@ -46,17 +46,19 @@ namespace Chiecnonkidieu
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             if (flag == true)
             {
 
                 Button b = (Button)sender;
                 char charClicked = b.Text.ToCharArray()[0];
+                //Kiểm tra câu trả lời của người dùng
                 if (Func.CheckCharClicked(charClicked))
                 {
 
                     lbthongbao.Text = "Bạn đã trả lời đúng";
-
-                    if (Func.SelectQuestion(charClicked, ketqua) == false)
+                   
+                    if (Func.SelectQuestion(charClicked, ketqua) == false)  //Kiểm tra nếu chưa trả lời hết câu hỏi
                     {
 
                         txtMang.Text = Func.soMang.ToString();
@@ -143,10 +145,7 @@ namespace Chiecnonkidieu
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            g.TranslateTransform(pictureBox1.Width / 2, pictureBox1.Height / 2);
-            g.RotateTransform(angle);
-            g.TranslateTransform(-pictureBox1.Width / 2, -pictureBox1.Height / 2);
-            g.DrawImage(img, 0, 0);
+            Func.pictureBox_Paint(g, pictureBox1, angle, img);
         }
 
         //Làm nón quay
@@ -170,15 +169,6 @@ namespace Chiecnonkidieu
                 MessageBox.Show("Bạn chưa chọn chữ cái", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 flag = true;
             }
-
-        }
-
-        //kết thúc trò chơi
-        private void Endgame()
-        {
-            Formluudiem frm = new Formluudiem(Func.diem);
-            frm.ShowDialog();
-            this.Hide();
 
         }
 
@@ -220,15 +210,9 @@ namespace Chiecnonkidieu
         }
         private void btthoat_Click(object sender, EventArgs e)
         {
-            Endgame();
-        }
-        private void FormPlaygame_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Formmain frm = new Formmain();
-            frm.Show();
+            Func.Endgame();
             this.Hide();
         }
-
         //Vẽ nền cho form
         private void FormPlaygame_Paint(object sender, PaintEventArgs e)
         {

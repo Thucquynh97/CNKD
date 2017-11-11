@@ -582,7 +582,6 @@
             this.Name = "FormPlaygame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chiếc nón kì diệu";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPlaygame_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormPlaygame_Paint);
             this.groupBox2.ResumeLayout(false);
