@@ -1,0 +1,8 @@
+E:\KTPM\CNKD\UnitTest\bin\Debug\UnitTest.dll
+E:\KTPM\CNKD\UnitTest\bin\Debug\UnitTest.pdb
+E:\KTPM\CNKD\UnitTest\bin\Debug\Chiecnonkidieu.exe
+E:\KTPM\CNKD\UnitTest\bin\Debug\Chiecnonkidieu.pdb
+E:\KTPM\CNKD\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+E:\KTPM\CNKD\UnitTest\obj\Debug\UnitTest.dll
+E:\KTPM\CNKD\UnitTest\obj\Debug\UnitTest.pdb
+E:\KTPM\CNKD\UnitTest\bin\Debug\UnitTest.dll.config

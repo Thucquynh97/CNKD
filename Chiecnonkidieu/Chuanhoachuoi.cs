@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chiecnonkidieu
 {
-    class Chuanhoachuoi
+   public class Chuanhoachuoi
     {
         public string btchuanhoa(string x)
         {
