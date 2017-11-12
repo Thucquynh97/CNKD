@@ -28,6 +28,7 @@ namespace Chiecnonkidieu
         private Random rand; //Biến lưu kết quả ngẫu nhiên
         private Connectsql cn = null;
         private Functionplaygame Func = null;
+        private char charClicked;
         public FormPlaygame()
         {
             InitializeComponent();
@@ -46,7 +47,7 @@ namespace Chiecnonkidieu
         private void button1_Click(object sender, EventArgs e)
         {
             Button b = (Button)sender;
-            char charClicked = b.Text.ToCharArray()[0];
+            charClicked = b.Text.ToCharArray()[0];
             if (flag == true)
             {
 
@@ -55,25 +56,20 @@ namespace Chiecnonkidieu
                 {
 
                     lbthongbao.Text = "Bạn đã trả lời đúng";
-                   
+
                     if (Func.SelectQuestion(charClicked, ketqua) == false)  //Kiểm tra nếu chưa trả lời hết câu hỏi
                     {
 
                         txtMang.Text = Func.soMang.ToString();
                         txtdiem.Text = Func.diem.ToString();
                         b.Enabled = false;
+                        EnableFalse(b.Text);
                     }
                     else
                     {
-                        FormChienthang frm1 = new FormChienthang();
-                        frm1.ShowDialog();
-                        FormYnghiacautraloi frm2 = new FormYnghiacautraloi(Func.numQuest);
-                        frm2.ShowDialog();
-                        txtMang.Text = Func.soMang.ToString();
-                        txtdiem.Text = Func.diem.ToString();
-                        lbchoi.Text = Func.lbchoi;
-                        EnableTrue();
+                        ChuyenCauHoi();
                     }
+
                 }
                 else
                 {
@@ -88,7 +84,8 @@ namespace Chiecnonkidieu
                         Func.Endgame();
                         this.Hide();
                     }
-                    
+                    EnableFalse(b.Text);
+
                 }
                 flag = false;
             }
@@ -96,8 +93,20 @@ namespace Chiecnonkidieu
             {
                 MessageBox.Show("Bạn chưa quay chiếc nón kỳ diệu", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            EnableFalse(b.Text);
 
+
+        }
+        private void ChuyenCauHoi()
+        {
+            FormChienthang frm1 = new FormChienthang();
+            frm1.ShowDialog();
+            FormYnghiacautraloi frm2 = new FormYnghiacautraloi(Func.numQuest);
+            frm2.ShowDialog();
+            txtMang.Text = Func.soMang.ToString();
+            txtdiem.Text = Func.diem.ToString();
+            lbchoi.Text = Func.lbchoi;
+            EnableTrue();
+            flag = false;
         }
         private void btchoi_Click(object sender, EventArgs e)
         {
@@ -176,7 +185,7 @@ namespace Chiecnonkidieu
                     case "Y": bty.Enabled = false; break;
                     case "W": btw.Enabled = false; break;
                     case "Z": btz.Enabled = false; break;
-                } 
+                }
             }
         }
         //Việc quay nón
@@ -204,7 +213,7 @@ namespace Chiecnonkidieu
             }
             else
             {
-                MessageBox.Show("Bạn chưa chọn chữ cái", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Bạn chưa chọn chữ cái", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = true;
             }
 
@@ -223,7 +232,7 @@ namespace Chiecnonkidieu
 
             this.Text = angle.ToString(); ;
             pictureBox1.Invalidate(); // vẽ lại trên picturebox
-          
+
             if (ketqua == angle && timer2.Enabled == false)
             {
                 timer1.Stop();
@@ -232,12 +241,19 @@ namespace Chiecnonkidieu
                 txtMang.Text = Func.soMang.ToString();
                 if (ketqua == 105)
                 {
-                      EnableFalse(Func.OMayMan(ketqua));             
+                    string kq = Func.OMayMan(ketqua);
+                    if (kq == null)
+                    {
+                        ChuyenCauHoi();
+                    }
+                    else
+                    {
+                        EnableFalse(kq);
+                        flag = true;
+                    }
                 }
-              
-                
-            
-                flag = true;
+                else
+                    flag = true;
             }
         }
 

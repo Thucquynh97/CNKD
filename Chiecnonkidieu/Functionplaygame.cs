@@ -21,14 +21,14 @@ namespace Chiecnonkidieu
         public string lbchoi { get; set; } //Biến lưu câu hỏi lấy từ csdl
         public int soMang { get; set; } //Biến lưu trữ số mạng của người dùng
         public int diem { get; set; } //Biến lưu trứ điểm của người dùng
-        public ArrayList selected { get; set; } // mảng chứa kí tự đúng của ng dùng
+
         public int numQuest { get; set; }
+        private ArrayList selected; // mảng chứa kí tự đúng của ng dùng
+        private int space; //Tính số khoảng trắng 
+        private int answerLength;//kiểm tra người dùng trả lời xong câu hỏi chưa
         public static int select { get; set; }//lựa chọn ô may mắn của người dùng
-        private int answerLength; //kiểm tra người dùng trả lời xong câu hỏi chưa
         private int countselecttrue; //Đêm câu trả lời đúng của ng dùng => người dùng đã trả lời xog câu hỏi chưa
         private List<PictureBox> picture; //Lưu từng ký tự của câu trả lời
-        private int space; //Tính số khoảng trắng 
-        private bool flag; //Biến cờ kiểm soát thao tác người dùng VD:Quay nón xong phải chọn chữ và ngược lại
         private int IQ = 0; //Biến đếm I câu hỏi
         private Connectsql cn = null;
         public Functionplaygame()
@@ -70,7 +70,7 @@ namespace Chiecnonkidieu
                 MessageBox.Show("Kết nối bị lỗi", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         //xoay chiếc nón
-        public void pictureBox_Paint(Graphics g,  PictureBox pic, int angle, Image img)
+        public void pictureBox_Paint(Graphics g, PictureBox pic, int angle, Image img)
         {
             g.TranslateTransform(pic.Width / 2, pic.Height / 2);
             g.RotateTransform(angle);
@@ -80,6 +80,7 @@ namespace Chiecnonkidieu
         //Kiểm tra và in kết quả
         public bool SelectQuestion(char charClicked, int ketqua)
         {
+            countselecttrue = 0;
             Connectsql.arrAnswer1[numQuest] = Connectsql.arrAnswer1[numQuest].ToString().ToUpper(); //Chuyển ký tự thành Chữ IN HOA
             char[] wordchar = Connectsql.arrAnswer1[numQuest].ToString().ToCharArray(); // chuyển chuỗi kết quả thành mảng kí tự
             for (int i = 0; i < wordchar.Length; i++)
@@ -103,10 +104,8 @@ namespace Chiecnonkidieu
             DialogResult dlg = MessageBox.Show("Có " + countselecttrue + " chữ " + charClicked, "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             for (int i = 0; i < countselecttrue; i++)
                 diem += Addpoint(ketqua);
-            countselecttrue = 0;
             if (dlg == DialogResult.OK)
             {
-                //Nếu người dùng trả lời xog câu hỏi sẽ chuyển sang câu hỏi kế tiếp
                 if (answerLength == Connectsql.arrAnswer1[numQuest].ToString().Length - space)
                 {
                     NextQuestion();
@@ -114,8 +113,6 @@ namespace Chiecnonkidieu
                 }
             }
             return false;
-
-
 
         }
         public int Addpoint(int x)
@@ -294,7 +291,7 @@ namespace Chiecnonkidieu
                     {
                         break;
                     }
-                    
+
                 case 120:
                     {
                         lbthongbao = "Bạn đã quay vào ô 300 điểm";
@@ -334,7 +331,7 @@ namespace Chiecnonkidieu
                 case 225:
                     {
                         MessageBox.Show("Bạn đã quay vào ô Thêm Mạng", "Chúc Mừng", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        soMang++;
+                        ThemMang();
                         break;
                     }
                 case 240:
@@ -411,12 +408,8 @@ namespace Chiecnonkidieu
                         return null;
                     }
                 }
-                SelectQuestion(wordchar[select], ketqua);
-                if (answerLength == Connectsql.arrAnswer1[numQuest].ToString().Length - space)
-                {
-                    NextQuestion();
-                    flag = false;
-                }
+                if (SelectQuestion(wordchar[select], ketqua) == true)
+                    return null;
 
             }
             else
@@ -424,7 +417,7 @@ namespace Chiecnonkidieu
                 MessageBox.Show("Hêt thời gian", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             return button;
-            
+
         }
         public List<PictureBox> AddPicturebox(int numQuest)
         {
@@ -479,13 +472,17 @@ namespace Chiecnonkidieu
         public void NextQuestion() //chuyển sang câu hỏi mới
         {
             diem += 500;
-            soMang++;
+            ThemMang();
             picture.Clear();
             selected.Clear();
             space = 0;
-            answerLength = 0; //reset lại biến space và answerLength
             AddPic();
-
+            answerLength = 0;
+        }
+        public void ThemMang()
+        {
+            if (soMang < 5)
+                soMang++;
         }
         public void Endgame()
         {
