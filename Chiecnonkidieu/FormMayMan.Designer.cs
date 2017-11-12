@@ -88,9 +88,9 @@
             this.btsubmit.BackgroundImage = global::Chiecnonkidieu.Properties.Resources.background1;
             this.btsubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btsubmit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btsubmit.Location = new System.Drawing.Point(554, 128);
+            this.btsubmit.Location = new System.Drawing.Point(554, 126);
             this.btsubmit.Name = "btsubmit";
-            this.btsubmit.Size = new System.Drawing.Size(82, 25);
+            this.btsubmit.Size = new System.Drawing.Size(82, 27);
             this.btsubmit.TabIndex = 2;
             this.btsubmit.Text = "May mắn";
             this.btsubmit.UseVisualStyleBackColor = true;

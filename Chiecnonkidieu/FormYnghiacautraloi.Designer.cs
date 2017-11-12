@@ -39,7 +39,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(100, 259);
+            this.button1.Location = new System.Drawing.Point(101, 259);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 36);
             this.button1.TabIndex = 0;
@@ -54,7 +54,7 @@
             this.txttext.Location = new System.Drawing.Point(1, 0);
             this.txttext.Multiline = true;
             this.txttext.Name = "txttext";
-            this.txttext.Size = new System.Drawing.Size(338, 242);
+            this.txttext.Size = new System.Drawing.Size(340, 253);
             this.txttext.TabIndex = 1;
             // 
             // FormYnghiacautraloi
