@@ -35,12 +35,12 @@
             // btthoat
             // 
             this.btthoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btthoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btthoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btthoat.ForeColor = System.Drawing.Color.Crimson;
             this.btthoat.Image = ((System.Drawing.Image)(resources.GetObject("btthoat.Image")));
-            this.btthoat.Location = new System.Drawing.Point(271, 444);
+            this.btthoat.Location = new System.Drawing.Point(368, 444);
             this.btthoat.Name = "btthoat";
-            this.btthoat.Size = new System.Drawing.Size(99, 37);
+            this.btthoat.Size = new System.Drawing.Size(113, 37);
             this.btthoat.TabIndex = 1;
             this.btthoat.Text = "Thoát";
             this.btthoat.UseVisualStyleBackColor = true;
