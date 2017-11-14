@@ -23,8 +23,6 @@ namespace Chiecnonkidieu
         private int count = 0; //Tạo hiệu ừng Quay ( timer2)
         private Image img; //Lưu trữ hình chiếc nón kỳ diệu
         private int angle; //góc của chiếc nón 15 điêm tương đương với 1 giá trị
-        private float width;
-        private float height;
         private Random rand; //Biến lưu kết quả ngẫu nhiên
         private Connectsql cn = null;
         private Functionplaygame Func = null;
@@ -63,7 +61,6 @@ namespace Chiecnonkidieu
                         txtMang.Text = Func.soMang.ToString();
                         txtdiem.Text = Func.diem.ToString();
                         b.Enabled = false;
-                        EnableFalse(b.Text);
                     }
                     else
                     {
@@ -73,7 +70,7 @@ namespace Chiecnonkidieu
                 }
                 else
                 {
-                    if (Func.soMang >= 0)
+                    if (Func.soMang > 0)
                     {
                         lbthongbao.Text = "Bạn đã trả lời sai";
                         txtMang.Text = Func.soMang.ToString();
@@ -208,8 +205,6 @@ namespace Chiecnonkidieu
                 timer1.Start();
                 timer2.Start();
                 btthoat.Enabled = false;
-                //flag = true;
-
             }
             else
             {
@@ -239,10 +234,10 @@ namespace Chiecnonkidieu
                 lbthongbao.Text = Func.Showpoint(ketqua);
                 txtdiem.Text = Func.diem.ToString();
                 txtMang.Text = Func.soMang.ToString();
-                if (ketqua == 105)
+                if (ketqua == 105) //Quay vào ô may mắn
                 {
                     string kq = Func.OMayMan(ketqua);
-                    if (kq == null)
+                    if (kq == null) //Nếu trả lời xong câu hỏi
                     {
                         ChuyenCauHoi();
                     }

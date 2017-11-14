@@ -49,7 +49,6 @@
   <ItemGroup>
     <Compile Include="Chuanhoachuoi.cs" />
     <Compile Include="Functionplaygame.cs" />
-    <Compile Include="Question.cs" />
     <Compile Include="Connectsql.cs" />
     <Compile Include="FormChienthang.cs">
       <SubType>Form</SubType>

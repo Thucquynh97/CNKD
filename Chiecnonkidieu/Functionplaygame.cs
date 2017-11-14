@@ -40,23 +40,21 @@ namespace Chiecnonkidieu
 
         public bool CheckCharClicked(char charClicked) //Kiểm tra ký tự nhập đúng của người dùng
         {
+            bool flag;
             Connectsql.arrAnswer1[numQuest] = Connectsql.arrAnswer1[numQuest].ToString().ToUpper(); //Chuyển ký tự thành Chữ IN HOA
             //Người chơi chọn đúng kí tự trong câu trả lời
             if (Connectsql.arrAnswer1[numQuest].ToString().Contains(charClicked))
             {
-                return true;
+                flag = true;
             }
             else
             {
 
-                if (soMang > 1)
+                if (soMang >= 1)
                     soMang--;
-                else
-                {
-                    soMang--;
-                }
-                return false;
+                flag = false;
             }
+            return flag;
         }
         public void StartGame()
         {
@@ -80,6 +78,7 @@ namespace Chiecnonkidieu
         //Kiểm tra và in kết quả
         public bool SelectQuestion(char charClicked, int ketqua)
         {
+            bool flag = false;
             countselecttrue = 0;
             Connectsql.arrAnswer1[numQuest] = Connectsql.arrAnswer1[numQuest].ToString().ToUpper(); //Chuyển ký tự thành Chữ IN HOA
             char[] wordchar = Connectsql.arrAnswer1[numQuest].ToString().ToCharArray(); // chuyển chuỗi kết quả thành mảng kí tự
@@ -109,10 +108,10 @@ namespace Chiecnonkidieu
                 if (answerLength == Connectsql.arrAnswer1[numQuest].ToString().Length - space)
                 {
                     NextQuestion();
-                    return true;
+                    flag = true;
                 }
             }
-            return false;
+            return flag;
 
         }
         public int Addpoint(int x)
@@ -405,7 +404,7 @@ namespace Chiecnonkidieu
                     if (select2 == wordchar[select])
                     {
                         MessageBox.Show("Từ Đã lật", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return null;
+                        return "";
                     }
                 }
                 if (SelectQuestion(wordchar[select], ketqua) == true)
@@ -419,7 +418,7 @@ namespace Chiecnonkidieu
             return button;
 
         }
-        public List<PictureBox> AddPicturebox(int numQuest)
+        public void AddPicturebox(int numQuest)
         {
             space = 0;
             gbdapan.Controls.Clear();
@@ -455,14 +454,13 @@ namespace Chiecnonkidieu
                 pic.BringToFront(); //mang pic ra trước groupbox, bảo đảm được nhìn thấy
                 picture.Add(pic);
             }
-            return picture;
         }
         public void AddPic()
         {
             RandQuestion();
             IQ++;
             lbchoi = "Câu " + IQ + " :" + Connectsql.arrQuestion[numQuest].ToString();
-            picture = AddPicturebox(numQuest);
+            AddPicturebox(numQuest);
         }
         public void RandQuestion()
         {

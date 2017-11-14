@@ -62,7 +62,7 @@ namespace UnitTest
 
         }
 
-        [TestMethod]
+        [TestMethod,Ignore]
         public void Kiemtra_PhuongthucAddquestion_nhapdaydu()
         {
             string cauhoi = "câu hỏi";
