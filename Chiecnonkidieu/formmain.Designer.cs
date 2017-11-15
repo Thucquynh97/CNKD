@@ -116,12 +116,13 @@
             this.AutoScroll = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(664, 476);
+            this.ControlBox = false;
             this.Controls.Add(this.huongdan);
             this.Controls.Add(this.tuychinh);
             this.Controls.Add(this.thoat);
             this.Controls.Add(this.xemdiem);
             this.Controls.Add(this.playgane);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Formmain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chiếc nón kỳ diệu";

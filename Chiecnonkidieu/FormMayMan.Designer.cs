@@ -92,7 +92,7 @@
             this.btsubmit.Name = "btsubmit";
             this.btsubmit.Size = new System.Drawing.Size(82, 27);
             this.btsubmit.TabIndex = 2;
-            this.btsubmit.Text = "May mắn";
+            this.btsubmit.Text = "Xác Nhận";
             this.btsubmit.UseVisualStyleBackColor = true;
             this.btsubmit.Click += new System.EventHandler(this.btsubmit_Click);
             // 
@@ -102,15 +102,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(735, 233);
+            this.ControlBox = false;
             this.Controls.Add(this.btsubmit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.txtmayman);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Formmayman";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "May Mắn";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Formmayman_FormClosed);
             this.Load += new System.EventHandler(this.Formmayman_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

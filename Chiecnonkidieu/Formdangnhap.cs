@@ -44,9 +44,14 @@ namespace Chiecnonkidieu
 
         private void button1_Click(object sender, EventArgs e)
         {
+           
+            this.Close();
+        }
+
+        private void Formdangnhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
             Formmain frm = new Formmain();
             frm.Show();
-            this.Hide();
         }
     }
 }

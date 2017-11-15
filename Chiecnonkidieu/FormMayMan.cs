@@ -23,7 +23,10 @@ namespace Chiecnonkidieu
             this.countNumOfQuestion = a;
             InitializeComponent();
         }
-
+        private void Formmayman_Load(object sender, EventArgs e)
+        {
+            count = Connectsql.arrAnswer1[countNumOfQuestion].ToString().Length;
+        }
         private void timerProgressBar_Tick(object sender, EventArgs e)
         {
             progressBar1.Increment(1);
@@ -31,17 +34,8 @@ namespace Chiecnonkidieu
             {
                 timerProgressBar.Stop();
                 progressBar1.Value = 0;
-                if (txtmayman.Text == "")
-                {
-                    Functionplaygame.select = -1;
-                    this.Close();
-                }
-                else
-                {
-                    Functionplaygame.select = int.Parse(txtmayman.Text) - 1;
-                    this.Close();
-                }
-
+                this.Close();
+          
             }
         }
 
@@ -64,20 +58,20 @@ namespace Chiecnonkidieu
             else if (txtmayman.Text != "" && int.Parse(txtmayman.Text) < count)
             {
 
-                Functionplaygame.select = int.Parse(txtmayman.Text) - 1;
-                this.Close();
+                Functionplaygame.select = (int.Parse(txtmayman.Text)) - 1;
+                this.Hide();
             }
             else
             {
-                MessageBox.Show("Bạn nhập gia trị sai\nNhập giá trị < " + count, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Bạn nhập gia trị sai\nNhập giá trị <= " + (count-1), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
 
         }
 
-        private void Formmayman_Load(object sender, EventArgs e)
+        private void Formmayman_FormClosed(object sender, FormClosedEventArgs e)
         {
-            count = Connectsql.arrAnswer1[countNumOfQuestion].ToString().Length;
+            Functionplaygame.select = -1;
         }
     }
 }

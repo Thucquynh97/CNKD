@@ -60,9 +60,20 @@ namespace Chiecnonkidieu
 
         private void btThoat_Click(object sender, EventArgs e)
         {
-            Formmain frm = new Formmain();
-            frm.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void Formcauhoi_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dlg = MessageBox.Show("Bạn có chắc chắn muốn thoát không ?", "Cảnh Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (dlg == DialogResult.OK)
+            {
+                Formmain frm = new Formmain();
+                frm.Show();
+            }
+            else
+                e.Cancel = true;
+
         }
     }
 }

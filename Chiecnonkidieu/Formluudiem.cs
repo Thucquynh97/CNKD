@@ -38,14 +38,16 @@ namespace Chiecnonkidieu
                 name = chuanhoa.btchuanhoa(name);
                 cn.ImportPoint(name, diem);
                 cn.Disconnect();
-                Formmain frm = new Formmain();
-                frm.Show();
-                this.Hide();
+                this.Close();
             }
             else
                 MessageBox.Show("Bạn Chưa Nhập Tên!");
         }
 
-
+        private void Formluudiem_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Formmain frm = new Formmain();
+            frm.Show();
+        }
     }
 }

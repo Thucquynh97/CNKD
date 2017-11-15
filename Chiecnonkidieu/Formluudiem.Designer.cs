@@ -76,13 +76,15 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(249, 142);
+            this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtname);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Formluudiem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lưu Điểm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Formluudiem_FormClosing);
             this.Load += new System.EventHandler(this.Formluudiem_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

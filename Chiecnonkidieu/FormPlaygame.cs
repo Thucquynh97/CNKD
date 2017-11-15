@@ -68,6 +68,7 @@ namespace Chiecnonkidieu
                         ChuyenCauHoi();
                         Func.NextQuestion();
                         lbchoi.Text = Func.lbchoi;
+
                     }
 
                 }
@@ -203,6 +204,7 @@ namespace Chiecnonkidieu
             {
                 rand = new Random();
                 ketqua = rand.Next(1, 25) * 15;
+                //ketqua = 105;
                 timer1.Interval = 30;
                 timer1.Start();
                 timer2.Start();
@@ -242,6 +244,8 @@ namespace Chiecnonkidieu
                     if (kq == null) //Nếu trả lời xong câu hỏi
                     {
                         ChuyenCauHoi();
+                        Func.NextQuestion();
+                        lbchoi.Text = Func.lbchoi;
                     }
                     else
                     {
@@ -269,8 +273,7 @@ namespace Chiecnonkidieu
         }
         private void btthoat_Click(object sender, EventArgs e)
         {
-            Func.Endgame();
-            this.Hide();
+           this.Close();
         }
         //Vẽ nền cho form
         private void FormPlaygame_Paint(object sender, PaintEventArgs e)
@@ -278,6 +281,17 @@ namespace Chiecnonkidieu
             Bitmap btm = new Bitmap(Application.StartupPath + @"\Picture\background1.jpg");
             Graphics g = e.Graphics;
             g.DrawImage((Image)btm, ClientRectangle);
+        }
+
+        private void FormPlaygame_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dlg = MessageBox.Show("Bạn có chắc chắn muốn thoát không ?", "Cảnh Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (dlg == DialogResult.OK)
+            {
+                Func.Endgame();
+            }
+            else
+                e.Cancel = true;
         }
     }
 }

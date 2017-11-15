@@ -50,5 +50,10 @@ namespace Chiecnonkidieu
             dgv.DataSource = dt;
             cn.Disconnect();
         }
+
+        private void FormXemdiem_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }

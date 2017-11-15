@@ -109,7 +109,7 @@
             this.groupBox2.Controls.Add(this.bta);
             this.groupBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox2.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.groupBox2.Location = new System.Drawing.Point(13, 301);
             this.groupBox2.Name = "groupBox2";
@@ -415,7 +415,7 @@
             // btchoi
             // 
             this.btchoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btchoi.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btchoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btchoi.ForeColor = System.Drawing.Color.Red;
             this.btchoi.Image = ((System.Drawing.Image)(resources.GetObject("btchoi.Image")));
             this.btchoi.Location = new System.Drawing.Point(136, 238);
@@ -429,7 +429,7 @@
             // btthoat
             // 
             this.btthoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btthoat.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btthoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btthoat.ForeColor = System.Drawing.Color.Red;
             this.btthoat.Image = ((System.Drawing.Image)(resources.GetObject("btthoat.Image")));
             this.btthoat.Location = new System.Drawing.Point(136, 269);
@@ -444,11 +444,11 @@
             // 
             this.gbdapan.BackColor = System.Drawing.Color.Transparent;
             this.gbdapan.Controls.Add(this.lbstatus);
-            this.gbdapan.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbdapan.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbdapan.ForeColor = System.Drawing.Color.AliceBlue;
             this.gbdapan.Location = new System.Drawing.Point(12, 100);
             this.gbdapan.Name = "gbdapan";
-            this.gbdapan.Size = new System.Drawing.Size(650, 121);
+            this.gbdapan.Size = new System.Drawing.Size(795, 121);
             this.gbdapan.TabIndex = 4;
             this.gbdapan.TabStop = false;
             this.gbdapan.Text = "Đáp Án";
@@ -520,7 +520,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Enabled = false;
-            this.pictureBox1.Location = new System.Drawing.Point(400, 320);
+            this.pictureBox1.Location = new System.Drawing.Point(459, 311);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(290, 290);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -544,7 +544,7 @@
             this.lbchoi.ForeColor = System.Drawing.Color.White;
             this.lbchoi.Location = new System.Drawing.Point(12, 17);
             this.lbchoi.Name = "lbchoi";
-            this.lbchoi.Size = new System.Drawing.Size(649, 71);
+            this.lbchoi.Size = new System.Drawing.Size(795, 71);
             this.lbchoi.TabIndex = 11;
             this.lbchoi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -552,9 +552,9 @@
             // 
             this.lbthongbao.BackColor = System.Drawing.Color.Transparent;
             this.lbthongbao.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbthongbao.ForeColor = System.Drawing.Color.Red;
+            this.lbthongbao.ForeColor = System.Drawing.Color.White;
             this.lbthongbao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbthongbao.Location = new System.Drawing.Point(268, 232);
+            this.lbthongbao.Location = new System.Drawing.Point(364, 231);
             this.lbthongbao.Name = "lbthongbao";
             this.lbthongbao.Size = new System.Drawing.Size(349, 62);
             this.lbthongbao.TabIndex = 1;
@@ -564,7 +564,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 454);
+            this.ClientSize = new System.Drawing.Size(809, 454);
+            this.ControlBox = false;
             this.Controls.Add(this.lbthongbao);
             this.Controls.Add(this.lbchoi);
             this.Controls.Add(this.pictureBox1);
@@ -578,10 +579,11 @@
             this.Controls.Add(this.btchoi);
             this.Controls.Add(this.groupBox2);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormPlaygame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chiếc nón kì diệu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPlaygame_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormPlaygame_Paint);
             this.groupBox2.ResumeLayout(false);

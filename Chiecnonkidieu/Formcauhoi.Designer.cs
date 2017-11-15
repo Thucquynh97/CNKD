@@ -186,6 +186,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(807, 455);
+            this.ControlBox = false;
             this.Controls.Add(this.btThoat);
             this.Controls.Add(this.btThem);
             this.Controls.Add(this.label3);
@@ -195,11 +196,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtcauhoi);
             this.Controls.Add(this.dgv);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Formcauhoi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tùy Chỉnh";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Formcauhoi_FormClosing);
             this.Load += new System.EventHandler(this.Formcauhoi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);

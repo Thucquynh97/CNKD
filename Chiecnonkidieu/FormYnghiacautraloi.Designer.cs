@@ -39,7 +39,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(101, 259);
+            this.button1.Location = new System.Drawing.Point(226, 404);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 36);
             this.button1.TabIndex = 0;
@@ -51,10 +51,10 @@
             // 
             this.txttext.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttext.ForeColor = System.Drawing.Color.Purple;
-            this.txttext.Location = new System.Drawing.Point(1, 0);
+            this.txttext.Location = new System.Drawing.Point(6, 7);
             this.txttext.Multiline = true;
             this.txttext.Name = "txttext";
-            this.txttext.Size = new System.Drawing.Size(340, 253);
+            this.txttext.Size = new System.Drawing.Size(572, 391);
             this.txttext.TabIndex = 1;
             // 
             // FormYnghiacautraloi
@@ -65,11 +65,12 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(340, 307);
+            this.ClientSize = new System.Drawing.Size(585, 445);
+            this.ControlBox = false;
             this.Controls.Add(this.txttext);
             this.Controls.Add(this.button1);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormYnghiacautraloi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ý Nghĩa Câu Trả Lời";
