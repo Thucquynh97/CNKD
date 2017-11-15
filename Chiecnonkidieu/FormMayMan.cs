@@ -56,12 +56,12 @@ namespace Chiecnonkidieu
 
         private void btsubmit_Click(object sender, EventArgs e)
         {
-            if(txtmayman.Text == "")
+            if (txtmayman.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập ô may mắn", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        
-            else if (txtmayman.Text != "" && int.Parse(txtmayman.Text) <= count)
+
+            else if (txtmayman.Text != "" && int.Parse(txtmayman.Text) < count)
             {
 
                 Functionplaygame.select = int.Parse(txtmayman.Text) - 1;

@@ -107,7 +107,6 @@ namespace Chiecnonkidieu
             {
                 if (answerLength == Connectsql.arrAnswer1[numQuest].ToString().Length - space)
                 {
-                    NextQuestion();
                     flag = true;
                 }
             }

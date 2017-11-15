@@ -13,6 +13,9 @@ namespace Chiecnonkidieu
 {
     public partial class FormXemdiem : Form
     {
+        private Connectsql cn;
+        private DataTable dt;
+        private SqlDataAdapter da;
         public FormXemdiem()
         {
             InitializeComponent();
@@ -20,11 +23,9 @@ namespace Chiecnonkidieu
 
         private void FormXemdiem_Load(object sender, EventArgs e)
         {
-            Connectsql cn = new Connectsql();
+            cn = new Connectsql();
             cn.Connect();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT TOP 10 * FROM Charts ORDER BY point DESC", cn.mysql);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
+            dt = GetData();
             dgv.DataSource = dt;
             cn.Disconnect();
         }
@@ -33,6 +34,21 @@ namespace Chiecnonkidieu
         {
             this.Close();
         }
+        private DataTable GetData()
+        {
 
+            da = new SqlDataAdapter("SELECT * FROM Charts ORDER BY point DESC", cn.mysql);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            cn.Connect();
+            cn.ResetDiem();
+            dt = GetData();
+            dgv.DataSource = dt;
+            cn.Disconnect();
+        }
     }
 }

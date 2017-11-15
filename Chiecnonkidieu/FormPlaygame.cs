@@ -64,7 +64,10 @@ namespace Chiecnonkidieu
                     }
                     else
                     {
+
                         ChuyenCauHoi();
+                        Func.NextQuestion();
+                        lbchoi.Text = Func.lbchoi;
                     }
 
                 }
@@ -101,7 +104,6 @@ namespace Chiecnonkidieu
             frm2.ShowDialog();
             txtMang.Text = Func.soMang.ToString();
             txtdiem.Text = Func.diem.ToString();
-            lbchoi.Text = Func.lbchoi;
             EnableTrue();
             flag = false;
         }

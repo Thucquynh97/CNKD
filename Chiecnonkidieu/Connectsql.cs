@@ -71,6 +71,14 @@ namespace Chiecnonkidieu
             return numOfAdd;
             Disconnect();
         }
+        public void ResetDiem()
+        {
+            Connect();
+            SqlCommand cm = new SqlCommand("uspReset", mysql);
+            cm.CommandType = CommandType.StoredProcedure;
+            cm.ExecuteNonQuery();
+            Disconnect();
+        }
         public List<object> ExecuteReader(string sql)
         {
             SqlDataReader dr;
@@ -124,7 +132,6 @@ namespace Chiecnonkidieu
             }
             catch (SqlException ex)
             {
-
                 throw ex;
             }
             for (int j = 0; j < dt.Rows.Count; j++)

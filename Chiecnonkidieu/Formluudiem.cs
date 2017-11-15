@@ -35,12 +35,12 @@ namespace Chiecnonkidieu
             if (name != "")
             {
                 cn.Connect();
-                chuanhoa.btchuanhoa(name);
+                name = chuanhoa.btchuanhoa(name);
                 cn.ImportPoint(name, diem);
                 cn.Disconnect();
                 Formmain frm = new Formmain();
                 frm.Show();
-                this.Hide(); 
+                this.Hide();
             }
             else
                 MessageBox.Show("Bạn Chưa Nhập Tên!");
