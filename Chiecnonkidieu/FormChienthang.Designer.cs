@@ -76,6 +76,7 @@
             this.bttieptuc.Text = "Tiếp tục";
             this.bttieptuc.UseVisualStyleBackColor = true;
             this.bttieptuc.Click += new System.EventHandler(this.bttieptuc_Click);
+            this.bttieptuc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bttieptuc_KeyDown);
             // 
             // FormChienthang
             // 

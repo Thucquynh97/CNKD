@@ -118,7 +118,7 @@
             this.txtcautraloi.Location = new System.Drawing.Point(96, 37);
             this.txtcautraloi.Name = "txtcautraloi";
             this.txtcautraloi.Size = new System.Drawing.Size(334, 20);
-            this.txtcautraloi.TabIndex = 1;
+            this.txtcautraloi.TabIndex = 2;
             // 
             // label2
             // 
@@ -137,7 +137,7 @@
             this.txtgiaithich.Location = new System.Drawing.Point(96, 72);
             this.txtgiaithich.Name = "txtgiaithich";
             this.txtgiaithich.Size = new System.Drawing.Size(334, 20);
-            this.txtgiaithich.TabIndex = 1;
+            this.txtgiaithich.TabIndex = 3;
             // 
             // label3
             // 
@@ -160,10 +160,11 @@
             this.btThem.Location = new System.Drawing.Point(512, 41);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(80, 33);
-            this.btThem.TabIndex = 3;
+            this.btThem.TabIndex = 4;
             this.btThem.Text = "Thêm";
             this.btThem.UseVisualStyleBackColor = true;
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
+            this.btThem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btThem_KeyDown);
             // 
             // btThoat
             // 
@@ -174,7 +175,7 @@
             this.btThoat.Location = new System.Drawing.Point(633, 41);
             this.btThoat.Name = "btThoat";
             this.btThoat.Size = new System.Drawing.Size(85, 33);
-            this.btThoat.TabIndex = 3;
+            this.btThoat.TabIndex = 5;
             this.btThoat.Text = "Thoát";
             this.btThoat.UseVisualStyleBackColor = true;
             this.btThoat.Click += new System.EventHandler(this.btThoat_Click);

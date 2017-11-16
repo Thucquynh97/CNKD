@@ -22,5 +22,10 @@ namespace Chiecnonkidieu
             this.Close();
         }
 
+        private void bttieptuc_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+                this.Close();
+        }
     }
 }

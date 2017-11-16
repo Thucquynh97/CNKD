@@ -75,5 +75,10 @@ namespace Chiecnonkidieu
                 e.Cancel = true;
 
         }
+
+        private void btThem_KeyDown(object sender, KeyEventArgs e)
+        {
+          
+        }
     }
 }
