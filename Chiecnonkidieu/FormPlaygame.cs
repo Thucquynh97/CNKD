@@ -177,6 +177,7 @@ namespace Chiecnonkidieu
                     case "P": btp.Enabled = false; break;
                     case "Q": btq.Enabled = false; break;
                     case "R": btr.Enabled = false; break;
+                    case "T": btt.Enabled = false; break;
                     case "S": bts.Enabled = false; break;
                     case "U": btu.Enabled = false; break;
                     case "V": btv.Enabled = false; break;
