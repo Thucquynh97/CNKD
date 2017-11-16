@@ -119,7 +119,6 @@ namespace Chiecnonkidieu
             pictureBox1.Enabled = true;
             groupBox2.Enabled = true;
             Func.diem = 0;
-            Func.soMang = 5;
             txtdiem.Text = Func.diem.ToString();
             txtMang.Text = Func.soMang.ToString();
 
@@ -228,8 +227,6 @@ namespace Chiecnonkidieu
             }
             else
                 angle += 15;
-
-            this.Text = angle.ToString(); ;
             pictureBox1.Invalidate(); // vẽ lại trên picturebox
 
             if (ketqua == angle && timer2.Enabled == false)

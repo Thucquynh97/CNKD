@@ -61,7 +61,7 @@ namespace Chiecnonkidieu
             cn.Connect();
             if (cn.ImportQA(cn.mysql, "SELECT *FROM Question") != -1)
             {
-                soMang = 2;
+                soMang = 5;
                 AddPic();
             }
             else
@@ -464,7 +464,7 @@ namespace Chiecnonkidieu
         public void RandQuestion()
         {
             Random rand = new Random();
-            numQuest = rand.Next(0, Connectsql.arrQuestion.Count);
+            numQuest = rand.Next(0, Connectsql.arrQuestion.Count) - 1;
         }
         public void NextQuestion() //chuyển sang câu hỏi mới
         {
