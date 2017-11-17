@@ -64,10 +64,12 @@ namespace Chiecnonkidieu
                     }
                     else
                     {
-
+                        
                         ChuyenCauHoi();
                         Func.NextQuestion();
                         lbchoi.Text = Func.lbchoi;
+                        txtMang.Text = Func.soMang.ToString();
+                        txtdiem.Text = Func.diem.ToString();
 
                     }
 
@@ -103,8 +105,7 @@ namespace Chiecnonkidieu
             frm1.ShowDialog();
             FormYnghiacautraloi frm2 = new FormYnghiacautraloi(Func.numQuest);
             frm2.ShowDialog();
-            txtMang.Text = Func.soMang.ToString();
-            txtdiem.Text = Func.diem.ToString();
+
             EnableTrue();
             flag = false;
         }
@@ -244,6 +245,8 @@ namespace Chiecnonkidieu
                         ChuyenCauHoi();
                         Func.NextQuestion();
                         lbchoi.Text = Func.lbchoi;
+                        txtMang.Text = Func.soMang.ToString();
+                        txtdiem.Text = Func.diem.ToString();
                     }
                     else
                     {

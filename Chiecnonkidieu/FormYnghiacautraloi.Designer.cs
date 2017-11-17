@@ -54,6 +54,7 @@
             this.txttext.Location = new System.Drawing.Point(6, 7);
             this.txttext.Multiline = true;
             this.txttext.Name = "txttext";
+            this.txttext.ReadOnly = true;
             this.txttext.Size = new System.Drawing.Size(572, 391);
             this.txttext.TabIndex = 1;
             // 

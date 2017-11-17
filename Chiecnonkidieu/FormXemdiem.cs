@@ -37,7 +37,7 @@ namespace Chiecnonkidieu
         private DataTable GetData()
         {
 
-            da = new SqlDataAdapter("SELECT * FROM Charts ORDER BY point DESC", cn.mysql);
+            da = new SqlDataAdapter("SELECT TOP 10 * FROM Charts ORDER BY point DESC", cn.mysql);
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;

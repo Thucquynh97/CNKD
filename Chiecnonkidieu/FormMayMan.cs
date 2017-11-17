@@ -59,7 +59,7 @@ namespace Chiecnonkidieu
                 MessageBox.Show("Bạn chưa nhập ô may mắn", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (txtmayman.Text != "" && int.Parse(txtmayman.Text) <= length)
+            else if (txtmayman.Text != "" && int.Parse(txtmayman.Text) >= 1 && int.Parse(txtmayman.Text) <= length)
             {
 
                 Functionplaygame.select = (int.Parse(txtmayman.Text)) - 1;
@@ -67,7 +67,7 @@ namespace Chiecnonkidieu
             }
             else
             {
-                MessageBox.Show("Bạn nhập gia trị sai\nNhập giá trị <= " + length, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Bạn nhập gia trị sai\nNhập giá trị >= 1 và <= " + length, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
 
