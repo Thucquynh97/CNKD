@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Chuanhoachuoi.cs" />
+    <Compile Include="FormKhoiDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKhoiDong.Designer.cs">
+      <DependentUpon>FormKhoiDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Functionplaygame.cs" />
     <Compile Include="Question.cs" />
     <Compile Include="Connectsql.cs" />
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formhuongdan.resx">
       <DependentUpon>Formhuongdan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKhoiDong.resx">
+      <DependentUpon>FormKhoiDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formmain.resx">
       <DependentUpon>Formmain.cs</DependentUpon>

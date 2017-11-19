@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Threading;
 namespace Chiecnonkidieu
 {
     public partial class Formmain : Form
@@ -16,9 +16,18 @@ namespace Chiecnonkidieu
         Bitmap btm;
         public Formmain()
         {
+            Thread t = new Thread(new ThreadStart(StartFrm));
+            t.Start();
+            Thread.Sleep(5000);
             InitializeComponent();
-        }
+            t.Abort();
 
+
+        }
+        public void StartFrm ()
+        {
+            Application.Run(new FormKhoiDong());
+        }
         private void playgane_Click(object sender, EventArgs e)
         {
             FormPlaygame frm = new FormPlaygame();
