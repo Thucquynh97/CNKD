@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Chiecnonkidieu;
 namespace Chiecnonkidieu
 {
     public partial class Formdangnhap : Form
@@ -19,15 +19,17 @@ namespace Chiecnonkidieu
 
         private void Formdangnhap_Load(object sender, EventArgs e)
         {
+           
             
 
         }
 
         private void btdangnhap_Click(object sender, EventArgs e)
         {
+            Functionplaygame Func = new Functionplaygame();
             string tk = txtusername.Text.Trim();
             string mk = txtpassword.Text.Trim();
-            if (tk == "phu" && mk == "12345")
+            if(Func.DangNhap(tk,mk))
             {
                 Formcauhoi frm = new Formcauhoi();
                 frm.Show();

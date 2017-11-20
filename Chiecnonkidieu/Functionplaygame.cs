@@ -58,6 +58,7 @@ namespace Chiecnonkidieu
         }
         public void StartGame()
         {
+            diem = 0;
             cn.Connect();
             if (cn.ImportQA(cn.mysql, "SELECT *FROM Question") != -1)
             {
@@ -66,6 +67,18 @@ namespace Chiecnonkidieu
             }
             else
                 MessageBox.Show("Kết nối bị lỗi", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+        //Đăng Nhập
+        public bool DangNhap(string tk , string mk)
+        {
+            if (tk == "nhom8" && mk == "12345")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         //xoay chiếc nón
         public void pictureBox_Paint(Graphics g, PictureBox pic, int angle, Image img)
